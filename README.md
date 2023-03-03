@@ -2,9 +2,16 @@
 
 Group 2:
 
-Samuel Owoade 
-Talia Crawford 
-Ayorinde Lawani 
-Abel Uzoka 
-Richard Fueston 
-Scott Duong
+Samuel Owoade - Developer 
+
+Talia Crawford - Product Owner
+
+Ayorinde Lawani - Developer 
+
+Abel Uzoka - Developer 
+
+Richard Fueston - Scrum Master 
+
+Scott Duong - Developer 
+
+
