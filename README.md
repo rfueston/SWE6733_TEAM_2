@@ -59,4 +59,6 @@ Third release – The third release will include a finalized version of company 
 •	The Story is broken up enough that it can be sized for one sprint. <br>
 •	The Story is sized with story points.<br>
 
-<h2>Rationale for how you ordered your backlog: (WIP)</h2>
+<h2>Rationale for how you ordered your backlog:</h2>
+
+Our Projects backlog is organized with dependencies, application workflow, and time in mind. By this we set our tools needed to work on something first in order. Figma is needed to create prototype UI. The prototype UI creation is needed to understand and create the whole login flow, so it must go first. Then, firebase and the backend are needed to create the login page functions and the backend for accounts will take longer to finish than the login UI, so it needs to go before the UI. Then the login UI is needed to create the login feature, so it is ordered next. We are starting with the login flow because it is the first flow the user will see and after is the main page of the application. 
