@@ -30,7 +30,7 @@ Who are looking for a way to find others with similar outdoor interests  <br>
 The AdventureQuest	web application  <br>
 is a social connection app <br>
 That is free to use without Ads <br>
-Unlike MeetUp <br>
+Unlike the MeetUp application<br>
 Our Product is an experience-driven platform  <br>
 
  <h3>Stakeholders: </h3> 
