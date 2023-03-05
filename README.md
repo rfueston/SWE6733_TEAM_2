@@ -56,7 +56,6 @@ Third release – The third release will include a finalized version of company 
   &emsp;•	Example: UI: Design UI Prototyping, for the Application<br>
 •	User Story opening sentence. <br>
   &emsp;•	As a [role] I want…, so that…<br>
-•	Already an actionable task. <br>
 •	Foundational requirements for the story.<br>
 •	Additional details for the story.<br>
 •	The Story has value to end user. <br>
