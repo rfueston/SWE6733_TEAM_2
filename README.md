@@ -21,6 +21,9 @@ Scott Duong - Developer
 
 <h2>Product Vision:</h2>
 
+<h3>Product Vision Board: </h3>
+https://kennesawedu.sharepoint.com/:b:/s/Team-Team-SWE6733_Team_2/EaMjk66GLhVOjHA6I2lMApcBMD5p_BO94lVZ3YE99yOoEQ?e=LCmu5X
+
 <h3>Near Vision: </h3>
 
 Initial release – Initial product release will include a system for outdoor enthusiasts to connect with others in their area with similar interests. Minimal features will be available upon initial release of the application. These will include creating a profile with activity preferences, an algorithm to show users profiles of other users with similar preferences in a certain area range, the ability for users to “swipe” between potential matches after viewing their profiles, and an ability to message matches.  
