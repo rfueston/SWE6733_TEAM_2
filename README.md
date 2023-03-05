@@ -37,7 +37,7 @@ Our Product is an experience-driven platform  <br>
 Outdoor enthusiasts (application users), Company shareholders, Development team, PO, AQ management team, National and local parks and recreation authorities, Social media partners, Partner/sponsor companies 
 
 <h3>Product Vision Board: </h3>
-https://kennesawedu.sharepoint.com/:b:/s/Team-Team-SWE6733_Team_2/EaMjk66GLhVOjHA6I2lMApcBMD5p_BO94lVZ3YE99yOoEQ?e=LCmu5X
+https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest-/blob/main/Product-Vision-Board-with-Checklist.pdf
 
 <h3>Near Vision: </h3>
 
