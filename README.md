@@ -52,7 +52,7 @@ Third release – The third release will include a finalized version of company 
 <h2>Definition of Ready:</h2>
   
 •	Each story has a descriptive title.<br>
-  &emsp;•	[What is it part of] [action for the story] [what is it for]<br>
+  &emsp;•	[What is it part of]: [action for the story], [what is it for]<br>
   &emsp;•	Example: UI: Design UI Prototyping, for the Application<br>
 •	User Story opening sentence. <br>
   &emsp;•	As a [role] I want…, so that…<br>
