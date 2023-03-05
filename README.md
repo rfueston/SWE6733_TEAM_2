@@ -21,6 +21,24 @@ Scott Duong - Developer
 
 <h2>Product Vision:</h2>
 
+<h3>Product Vision Statement</h3>
+Web Application  
+
+For adventure seekers and outdoor enthusiasts 
+
+Who are looking for a way to find others with similar outdoor interests  
+
+The AdventureQuest	is a social connection app 
+
+That is free to use without Ads 
+
+Unlike MeetUp 
+
+Our Product is an experience-driven platform  
+
+ <h3>Stakeholders: </h3> 
+Outdoor enthusiasts (application users), Company shareholders, Development team, PO, AQ management team, National and local parks and recreation authorities, Social media partners, Partner/sponsor companies 
+
 <h3>Product Vision Board: </h3>
 https://kennesawedu.sharepoint.com/:b:/s/Team-Team-SWE6733_Team_2/EaMjk66GLhVOjHA6I2lMApcBMD5p_BO94lVZ3YE99yOoEQ?e=LCmu5X
 
