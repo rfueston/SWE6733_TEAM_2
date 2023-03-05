@@ -2,9 +2,6 @@
 
 <h2>APP:</h2> AdventureQuest 
 
-<h3>type:</h3>
-Web Application  
-
 <h2>Group 2:</h2>
 
 Samuel Owoade - Developer 
@@ -27,7 +24,7 @@ Scott Duong - Developer
 <h3>Product Vision Statement</h3>
 For adventure seekers and outdoor enthusiasts <br>
 Who are looking for a way to find others with similar outdoor interests  <br>
-The AdventureQuest	web application  <br>
+The AdventureQuest application  <br>
 is a social connection app <br>
 That is free to use without Ads <br>
 Unlike the MeetUp application<br>
