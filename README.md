@@ -25,10 +25,10 @@ Product Vision: WIP
 Definition of Ready: 
   
 •	Each story has a descriptive title.<br>
-  •	[What is it part of] [action for the story] [what is it for]<br>
-  •	Example: UI: Design UI Prototyping, for the Application<br>
+  &emsp;•	[What is it part of] [action for the story] [what is it for]<br>
+  &emsp;•	Example: UI: Design UI Prototyping, for the Application<br>
 •	User Story opening sentence. <br>
-  •	As a [role] I want…, so that…<br>
+  &emsp;•	As a [role] I want…, so that…<br>
 •	Already an actionable task. <br>
 •	Foundational requirements for the story.<br>
 •	Additional details for the story.<br>
