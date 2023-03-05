@@ -2,6 +2,9 @@
 
 <h2>APP:</h2> AdventureQuest 
 
+<h3>type:</h3>
+Web Application  
+
 <h2>Group 2:</h2>
 
 Samuel Owoade - Developer 
@@ -22,19 +25,12 @@ Scott Duong - Developer
 <h2>Product Vision:</h2>
 
 <h3>Product Vision Statement</h3>
-Web Application  
-
-For adventure seekers and outdoor enthusiasts 
-
-Who are looking for a way to find others with similar outdoor interests  
-
-The AdventureQuest	is a social connection app 
-
-That is free to use without Ads 
-
-Unlike MeetUp 
-
-Our Product is an experience-driven platform  
+For adventure seekers and outdoor enthusiasts <br>
+Who are looking for a way to find others with similar outdoor interests  <br>
+The AdventureQuest	is a social connection app <br>
+That is free to use without Ads <br>
+Unlike MeetUp <br>
+Our Product is an experience-driven platform  <br>
 
  <h3>Stakeholders: </h3> 
 Outdoor enthusiasts (application users), Company shareholders, Development team, PO, AQ management team, National and local parks and recreation authorities, Social media partners, Partner/sponsor companies 
