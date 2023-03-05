@@ -17,7 +17,7 @@ Richard Fueston - Scrum Master
 Scott Duong - Developer 
 
 
-<h2>Product Backlog: https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/backlog</h2>
+<h2>Product Backlog:</h2> https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/backlog
 
 <h2>Product Vision:</h2>
 
