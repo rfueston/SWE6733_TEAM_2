@@ -2,7 +2,7 @@
 
 APP: AdventureQuest 
 
-Group 2:
+<h2>Group 2:</h2>
 
 Samuel Owoade - Developer 
 
