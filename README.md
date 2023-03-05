@@ -2,7 +2,7 @@
 
 APP: AdventureQuest 
 
-<h2>Group 2:</h2>
+<h3>Group 2:</h3>
 
 Samuel Owoade - Developer 
 
@@ -17,9 +17,9 @@ Richard Fueston - Scrum Master
 Scott Duong - Developer 
 
 
-Product Backlog: https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/backlog
+<h3>Product Backlog: https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/backlog</h3>
 
-Product Vision:
+<h3>Product Vision:</h3>
 
 Near Vision: 
 
@@ -31,7 +31,7 @@ Second release – The second release will include a more advanced algorithm wit
 
 Third release – The third release will include a finalized version of company partnerships, as well as a more in depth “premium” version of the application. The “premium” version will enhance profiles and matching features to allow for more specific matches.  
 
-Definition of Ready: 
+<h3>Definition of Ready:</h3>
   
 •	Each story has a descriptive title.<br>
   &emsp;•	[What is it part of] [action for the story] [what is it for]<br>
@@ -45,4 +45,4 @@ Definition of Ready:
 •	The Story is broken up enough that it can be sized for one sprint. <br>
 •	The Story is sized with story points.<br>
 
-Rationale for how you ordered your backlog: (WIP)
+<h3>Rationale for how you ordered your backlog: (WIP)</h3>
