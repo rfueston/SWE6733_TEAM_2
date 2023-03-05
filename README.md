@@ -1,6 +1,6 @@
 # SWE6733_TEAM_2
 
-APP: AdventureQuest 
+<h2>APP:</h2> AdventureQuest 
 
 <h2>Group 2:</h2>
 
