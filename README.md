@@ -22,7 +22,7 @@ Scott Duong - Developer
 <h2>Product Vision:</h2>
 
 <h3>Product Vision Board: </h3>
-<code>https://kennesawedu.sharepoint.com/:b:/s/Team-Team-SWE6733_Team_2/EaMjk66GLhVOjHA6I2lMApcBMD5p_BO94lVZ3YE99yOoEQ?e=LCmu5X</code>
+<link>https://kennesawedu.sharepoint.com/:b:/s/Team-Team-SWE6733_Team_2/EaMjk66GLhVOjHA6I2lMApcBMD5p_BO94lVZ3YE99yOoEQ?e=LCmu5X</link>
 
 <h3>Near Vision: </h3>
 
