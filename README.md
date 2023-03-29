@@ -104,6 +104,7 @@ Mob Programming!
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_SIGNIN_PAGE.png)
 
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_CREATE_ACCOUNT_PAGE.png)
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_HOME_PAGE.png)
 
