@@ -67,24 +67,42 @@ Our Projects backlog is organized with dependencies, application workflow, and t
 
 <h2>Sprint 1 Forecast and Rationale</h2>
 
+Sprint 1 Backlog: 
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Backlog.png)
+
 <h2>Sprint Baord</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
-https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Board.png
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Board.png)
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_completed.png)
 
 
 <h2>Sprint 1 Burndown Chart</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
 
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Burndown.png)
+
 <h2>Sprint Daily Scrum Standup Meeeting</h2>
 
 <h2>Paired and Mobbed Programming</h2>
 
+Paired Programming!
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Paired_Sprint_1.png)
+
+Mob Programming!
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/mobbing_Sprint_1.png)
+
 <h2>A-TDD Results</h2>
 
 <h2>Sprint Review and Sprint Retrospective</h2>
+
+Sprint Retro:
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_retro.png)
+
 
 <h2>Prototype Link</h2>
 
