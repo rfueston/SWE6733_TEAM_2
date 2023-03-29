@@ -67,6 +67,8 @@ Our Projects backlog is organized with dependencies, application workflow, and t
 
 <h2>Sprint 1 Forecast and Rationale</h2>
 
+Our team forecasted that we could complete 35 story points this sprint. That is almost 6 points per person and is a conservative number of points since this is our first sprint. We have decided that since none of us our familiar with our tech stack that we may run into blockers and should not pull too much into this sprint in case we do have issues. If this sprint goes well, we will consider adding more the next sprint. This is the minimum we felt we could add and still have a working prototype to demo at the end of the sprint.
+
 Sprint 1 Backlog: 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Backlog.png)
 
