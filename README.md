@@ -63,7 +63,7 @@ Third release – The third release will include a finalized version of company 
 
 Our Projects backlog is organized with dependencies, application workflow, and time in mind. By this we set our tools needed to work on something first in order. Figma is needed to create prototype UI. The prototype UI creation is needed to understand and create the whole login flow, so it must go first. Then, firebase and the backend are needed to create the login page functions and the backend for accounts will take longer to finish than the login UI, so it needs to go before the UI. Then the login UI is needed to create the login feature, so it is ordered next. We are starting with the login flow because it is the first flow the user will see and after is the main page of the application. 
 
-<h2>SPRINT 1</h2>
+<h1>SPRINT 1</h1>
 
 <h2>Sprint 1 Forecast and Rationale</h2>
 
