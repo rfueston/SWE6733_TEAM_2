@@ -122,4 +122,5 @@ https://youtu.be/yeJrb3i-Zj0
 
 <h2>Prototype Link</h2>
 
+(Current prototype is a Web App. Future plan is to have both iOS and Android option.)
 https://swe6733-adventure-quest.web.app
