@@ -78,7 +78,6 @@ https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_completed.png)
 
-
 <h2>Sprint 1 Burndown Chart</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
@@ -86,6 +85,8 @@ https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/bur
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Burndown.png)
 
 <h2>Sprint Daily Scrum Standup Meeeting</h2>
+
+https://youtu.be/w4XxaFh6ZWQ
 
 <h2>Paired and Mobbed Programming</h2>
 
@@ -99,8 +100,13 @@ Mob Programming!
 
 <h2>Sprint Review and Sprint Retrospective</h2>
 
+Sprint Review:
+
+https://youtu.be/-b6qb7F4zNQ
+
 Sprint Retro:
 
+https://youtu.be/yeJrb3i-Zj0
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_retro.png)
 
 
