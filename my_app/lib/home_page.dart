@@ -4,21 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'main.dart';
 
-
-void main() => runApp(const MyHome());
-
-class MyHome extends StatelessWidget {
-  const MyHome({super.key});
-  static const String _title = 'Test 1';
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: HomePage(),
-    );
-  }
-}
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
   @override
