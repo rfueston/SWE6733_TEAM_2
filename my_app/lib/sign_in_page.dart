@@ -1,8 +1,6 @@
-import 'package:english_words/english_words.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'main.dart';
+import 'account_sign_in.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -12,33 +10,57 @@ class SignInPage extends StatefulWidget {
 }
 
 class _MySignInPage extends State<SignInPage> {
-  void _login() {
-    setState(() {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyAdventureQuestSignIn()),
-      );
-    });
+  final myControllerUsername = TextEditingController();
+  final myControllerPassword = TextEditingController();
+
+  @override
+  void dispose() {
+    myControllerUsername.dispose();
+    myControllerPassword.dispose();
+    super.dispose();
+  }
+
+  Future<void> _login() async {
+    var acceptedAcount = AccountSignIn()
+        .accountSignIn(myControllerUsername.text, myControllerPassword.text);
+
+    if (await acceptedAcount == true) {
+      setState(() {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const MyAdventureQuestHome()),
+        );
+      });
+    } else {
+      setState(() {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const MyAdventureQuestSignIn()),
+        );
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("AdventureQuest"),
+        title: const Text(""),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Sign In Page',
+              'Welcome To AdventureQuest',
               textAlign: TextAlign.start,
             ),
             const Text('\n'),
-            const SizedBox(
+            SizedBox(
               width: 300.0,
               child: TextField(
+                key: Key('siginusername'),
+                controller: myControllerUsername,
                 maxLength: 40,
                 obscureText: false,
                 decoration: InputDecoration(
@@ -47,25 +69,27 @@ class _MySignInPage extends State<SignInPage> {
                 ),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               width: 300.0,
               child: TextField(
+                key: Key('siginpassword'),
+                controller: myControllerPassword,
                 maxLength: 40,
-                obscureText: false,
+                obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Password',
                 ),
               ),
             ),
-            const Text('\n'),
             ElevatedButton(
+              key: Key('siginbutton'),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(300, 60),
                 maximumSize: const Size(300, 60),
               ),
               onPressed: _login,
-              child: const Text('Login'),
+              child: const Text('SUBMIT'),
             ),
           ],
         ),

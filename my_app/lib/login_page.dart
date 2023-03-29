@@ -120,17 +120,20 @@ class _MyloginPageState extends State<LoginPage> {
               ),
             ),
             ElevatedButton(
+              key: Key('signinbuttonlogin'),
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(200, 40),
-                maximumSize: const Size(200, 40),
+                minimumSize: const Size(200, 60),
+                maximumSize: const Size(200, 60),
               ),
               onPressed: _logIn,
               child: const Text('SIGN IN'),
             ),
+            const Text('\n'),
             ElevatedButton(
+              key: Key('createbuttonlogin'),
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(200, 40),
-                maximumSize: const Size(200, 40),
+                minimumSize: const Size(200, 60),
+                maximumSize: const Size(200, 60),
               ),
               onPressed: _createAccount,
               child: const Text('CREATE ACCOUNT'),

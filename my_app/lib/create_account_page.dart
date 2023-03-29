@@ -1,8 +1,7 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'main.dart';
+import 'create_account.dart';
 
 class CreateAccountPage extends StatefulWidget {
   const CreateAccountPage({super.key});
@@ -12,13 +11,57 @@ class CreateAccountPage extends StatefulWidget {
 }
 
 class _MyCreateAccountPageState extends State<CreateAccountPage> {
-  void _createAccountLogin() {
-    setState(() {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyApp()),
-      );
-    });
+  final myControllerFirstName = TextEditingController();
+  final myControllerLastName = TextEditingController();
+  final myControllerUsername = TextEditingController();
+  final myControllerPassword = TextEditingController();
+  final myControllerRepeatPassword = TextEditingController();
+  final myControllerEmail = TextEditingController();
+
+  @override
+  void dispose() {
+    myControllerUsername.dispose();
+    myControllerPassword.dispose();
+    super.dispose();
+  }
+
+  Future<void> _createAccountLogin() async {
+    var existedAcount =
+        CreateAccount().createAccountCheck(myControllerUsername.text);
+
+    if (await existedAcount == true) {
+      setState(() {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => const MyAdventureQuestSignIn()),
+        );
+      });
+    } else if ((await existedAcount == false &&
+        myControllerPassword.text == myControllerRepeatPassword.text
+        && myControllerUsername.text != '')) {
+      CreateAccount().createUserAccount(
+          myControllerFirstName.text,
+          myControllerLastName.text,
+          myControllerUsername.text,
+          myControllerPassword.text,
+          myControllerEmail.text);
+
+      setState(() {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const MyAdventureQuestHome()),
+        );
+      });
+    } else {
+      setState(() {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => const MyAdventureQuestLogin()),
+        );
+      });
+    }
   }
 
   void _signIn() {
@@ -26,15 +69,6 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const MyAdventureQuestSignIn()),
-      );
-    });
-  }
-
-  void _cancelAccountLogin() {
-    setState(() {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyApp()),
       );
     });
   }
@@ -49,10 +83,13 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(
-              width: 300.0,
+            SizedBox(
+              width: 250.0,
+              height: 70,
               child: TextField(
-                maxLength: 40,
+                key: Key('createaccountfirstname'),
+                controller: myControllerFirstName,
+                maxLength: 20,
                 obscureText: false,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -60,10 +97,13 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              width: 300.0,
+            SizedBox(
+              width: 250.0,
+              height: 70,
               child: TextField(
-                maxLength: 40,
+                key: Key('createaccountlastname'),
+                controller: myControllerLastName,
+                maxLength: 20,
                 obscureText: false,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -71,10 +111,27 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              width: 300.0,
+            SizedBox(
+              width: 250.0,
+              height: 70,
               child: TextField(
-                maxLength: 40,
+                key: Key('createaccountusername'),
+                controller: myControllerUsername,
+                maxLength: 20,
+                obscureText: false,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Username',
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 250.0,
+              height: 70,
+              child: TextField(
+                key: Key('createaccountpassword'),
+                controller: myControllerPassword,
+                maxLength: 20,
                 obscureText: false,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -82,10 +139,13 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              width: 300.0,
+            SizedBox(
+              width: 250.0,
+              height: 70,
               child: TextField(
-                maxLength: 40,
+                key: Key('createaccountrepeat'),
+                controller: myControllerRepeatPassword,
+                maxLength: 20,
                 obscureText: false,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -93,10 +153,13 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
                 ),
               ),
             ),
-            const SizedBox(
-              width: 300.0,
+            SizedBox(
+              width: 250.0,
+              height: 70,
               child: TextField(
-                maxLength: 40,
+                key: Key('createaccountemail'),
+                controller: myControllerEmail,
+                maxLength: 20,
                 obscureText: false,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -106,9 +169,10 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
             ),
             const Text('\n'),
             ElevatedButton(
+              key: Key('createbuttonAccount'),
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(300, 60),
-                maximumSize: const Size(300, 60),
+                minimumSize: const Size(250, 40),
+                maximumSize: const Size(250, 40),
               ),
               onPressed: _createAccountLogin,
               child: const Text('Create Account'),
@@ -124,10 +188,9 @@ class _MyCreateAccountPageState extends State<CreateAccountPage> {
                   ),
                   TextSpan(
                     text: 'Sign in',
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () => _signIn(),
+                    recognizer: TapGestureRecognizer()..onTap = () => _signIn(),
                     style:
-                    const TextStyle(decoration: TextDecoration.underline),
+                        const TextStyle(decoration: TextDecoration.underline),
                   ),
                 ],
               ),
