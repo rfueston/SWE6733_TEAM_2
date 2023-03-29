@@ -71,6 +71,9 @@ Our Projects backlog is organized with dependencies, application workflow, and t
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
+https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Board.png
+
+
 <h2>Sprint 1 Burndown Chart</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
