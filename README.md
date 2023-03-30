@@ -72,7 +72,7 @@ Our team forecasted that we could complete 35 story points this sprint. That is 
 Sprint 1 Backlog: 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Backlog.png)
 
-<h2>Sprint Baord</h2>
+<h2>Sprint Board</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
