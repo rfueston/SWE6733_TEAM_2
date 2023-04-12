@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'create_account_page.dart';
 import 'login_page.dart';
 import 'cookies_policy_page.dart';
+import 'matching_users_page.dart';
 import 'privacy_policy_page.dart';
 import 'reset_password_page.dart';
 import 'terms_page.dart';
@@ -22,8 +23,7 @@ void main() async {
         projectId: "swe6733-adventure-quest",
         authDomain: "swe6733-adventure-quest.firebaseapp.com",
         storageBucket: "swe6733-adventure-quest.appspot.com",
-        measurementId: "G-F1HBBJ9HRG"
-    ),
+        measurementId: "G-F1HBBJ9HRG"),
   );
   runApp(MyAdventureQuestLogin());
 }
@@ -43,6 +43,16 @@ class MyAdventureQuestLogin extends StatelessWidget {
         ),
         home: LoginPage(),
       ),
+    );
+  }
+}
+
+class MatchingUsersApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Matching Users',
+      home: MatchingUsersPage(),
     );
   }
 }

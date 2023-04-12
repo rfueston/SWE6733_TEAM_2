@@ -17,8 +17,7 @@ class CreateAccount {
     }
   }
 
-  void createUserAccount(
-      firstname, lastname, username, password, email) {
+  void createUserAccount(firstname, lastname, username, password, email) {
     final CollectionReference accountCollection =
         FirebaseFirestore.instance.collection('Accounts');
 

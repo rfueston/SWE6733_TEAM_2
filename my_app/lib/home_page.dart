@@ -1,27 +1,25 @@
+import 'package:adventurequest/liked_page.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'main.dart';
+import 'matching_users_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  // const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
+
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-  TextStyle(fontSize: 15, fontWeight: FontWeight.normal);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Profiles will be displayed here',
-      style: optionStyle,
-    ),
-    Text(
-      'Matches will be displayed here',
-      style: optionStyle,
-    ),
+
+  List<Widget> _widgetOptions = [
+    MatchingUsersPage(),
+    // LikedPage(user: user),
     Text(
       'Chats will be displayed here',
       style: optionStyle,
@@ -31,6 +29,27 @@ class _HomePageState extends State<HomePage> {
       style: optionStyle,
     ),
   ];
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 15, fontWeight: FontWeight.normal);
+  // static const List<Widget> _widgetOptions = <Widget>[
+  //   // Text(
+  //   //   'Profiles will be displayed here',
+  //   //   style: optionStyle,
+  //   // ),
+
+  //   Text(
+  //     'Matches will be displayed here',
+  //     style: optionStyle,
+  //   ),
+  //   Text(
+  //     'Chats will be displayed here',
+  //     style: optionStyle,
+  //   ),
+  //   Text(
+  //     'User profile will be displayed here',
+  //     style: optionStyle,
+  //   ),
+  // ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -60,7 +79,6 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
