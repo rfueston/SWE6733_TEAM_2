@@ -60,7 +60,7 @@ class _MySignInPage extends State<SignInPage> {
             SizedBox(
               width: 300.0,
               child: TextField(
-                key: Key('siginusername'),
+                key: Key('signInUsername'),
                 controller: myControllerUsername,
                 maxLength: 40,
                 obscureText: false,
@@ -73,7 +73,7 @@ class _MySignInPage extends State<SignInPage> {
             SizedBox(
               width: 300.0,
               child: TextField(
-                key: Key('siginpassword'),
+                key: Key('signInPassword'),
                 controller: myControllerPassword,
                 maxLength: 40,
                 obscureText: true,
@@ -84,7 +84,7 @@ class _MySignInPage extends State<SignInPage> {
               ),
             ),
             ElevatedButton(
-              key: Key('siginbutton'),
+              key: Key('signInButton'),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(300, 60),
                 maximumSize: const Size(300, 60),

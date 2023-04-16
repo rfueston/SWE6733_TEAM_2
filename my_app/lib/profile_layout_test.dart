@@ -27,13 +27,17 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
   final myControllerFootball = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+  }
+
   void dispose() {
     // Bio settings
     // picture
     myControllerBio.dispose();
     // Account settings
-    // myControllerUsername.dispose();
-    // myControllerPassword.dispose();
+    myControllerUsername.dispose();
+    myControllerPassword.dispose();
     myControllerDOB.dispose();
     myControllerEmail.dispose();
     // Location settings
@@ -69,52 +73,112 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
     } */
   }
 
-  final bioWidget =
-      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-    const Text(
-      'Bio Section',
-      textAlign: TextAlign.start,
-    ),
-    const Text('\n'),
-    const Image(
-      key: Key('profilePic'),
-      width: 300.0,
-      image: NetworkImage(
-          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-    ),
-    const Text('\n'),
-    SizedBox(
-      width: 600.0,
-      child: TextField(
-        key: Key('profileBio'),
-        //controller: myControllerBio,
-        maxLength: 1000,
-        obscureText: false,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          labelText: 'My Bio',
+  late final bioWidget = SingleChildScrollView(
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+        const Text(
+          'Bio Section',
+          textAlign: TextAlign.start,
         ),
-      ),
-    ),
-  ]);
+        const Text('\n'),
+        const Image(
+          key: Key('profilePic'),
+          width: 300.0,
+          image: NetworkImage(
+              'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+        ),
+        const Text('\n'),
+        SizedBox(
+          width: 600.0,
+          child: TextField(
+            key: Key('profileBio'),
+            //controller: myControllerBio,
+            maxLength: 1000,
+            obscureText: false,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'My Bio',
+            ),
+          ),
+        ),
+      ]));
 
-  final accountSettingsWidget =
-      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-    const Text(
-      'Account Settings',
-      textAlign: TextAlign.start,
-    ),
-  ]);
+  late final accountSettingsWidget = SingleChildScrollView(
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+        const Text(
+          'Account Settings',
+          textAlign: TextAlign.start,
+        ),
+        SizedBox(
+          width: 300.0,
+          child: TextField(
+            key: Key('profileUsername'),
+            enabled: false,
+            controller: myControllerDOB,
+            maxLength: 40,
+            obscureText: false,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Username',
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 300.0,
+          child: TextField(
+            key: Key('profilePassword'),
+            enabled: false,
+            controller: myControllerEmail,
+            maxLength: 40,
+            obscureText: true,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Password',
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 300.0,
+          child: TextField(
+            key: Key('profileDOB'),
+            controller: myControllerDOB,
+            maxLength: 40,
+            obscureText: false,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'DOB',
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 300.0,
+          child: TextField(
+            key: Key('profileEmail'),
+            controller: myControllerEmail,
+            maxLength: 40,
+            obscureText: true,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Email',
+            ),
+          ),
+        ),
+      ]));
 
-  final locationSettingsWidget =
-      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-    const Text(
-      'Location Settings',
-      textAlign: TextAlign.start,
-    ),
-  ]);
+  late final locationSettingsWidget = SingleChildScrollView(
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+        const Text(
+          'Location Settings',
+          textAlign: TextAlign.start,
+        ),
+      ]));
 
-  final activitiesSettingsWidget =
+  late final activitiesSettingsWidget =
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
     const Text(
       'Activities Settings',
@@ -129,8 +193,9 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
         title: const Text(""),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          shrinkWrap: true,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             bioWidget,
             const Text('\n'),
