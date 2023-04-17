@@ -59,9 +59,8 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
       );
     });
   }
-
 //
-  late final bioWidget =
+  late final bioSettingsWidget =
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
     const Text(
       'Bio Section',
@@ -271,7 +270,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            bioWidget,
+            bioSettingsWidget,
             const Text('\n'),
             accountSettingsWidget,
             const Text(
