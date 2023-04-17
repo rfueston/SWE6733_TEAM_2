@@ -67,7 +67,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
       textAlign: TextAlign.start,
     ),
     const Image(
-      key: Key('profilePic'),
+      key: Key('profilepic'),
       width: 300.0,
       image: NetworkImage(
           'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
@@ -76,7 +76,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     SizedBox(
       width: 600.0,
       child: TextField(
-        key: Key('profileBio'),
+        key: Key('profilebio'),
         controller: myControllerBio,
         maxLength: 1000,
         obscureText: false,
@@ -97,7 +97,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     SizedBox(
       width: 300.0,
       child: TextField(
-        key: Key('profileUsername'),
+        key: Key('profileusername'),
         enabled: false,
         controller: myControllerDOB,
         maxLength: 40,
@@ -111,7 +111,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     SizedBox(
       width: 300.0,
       child: TextField(
-        key: Key('profilePassword'),
+        key: Key('profilepassword'),
         enabled: false,
         controller: myControllerEmail,
         maxLength: 40,
@@ -125,7 +125,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     SizedBox(
       width: 300.0,
       child: TextField(
-        key: Key('profileDOB'),
+        key: Key('profiledob'),
         controller: myControllerDOB,
         maxLength: 40,
         obscureText: false,
@@ -138,7 +138,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     SizedBox(
       width: 300.0,
       child: TextField(
-        key: Key('profileEmail'),
+        key: Key('profileemail'),
         controller: myControllerEmail,
         maxLength: 40,
         obscureText: true,
@@ -154,7 +154,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   var items = ['Georgia', 'Florida', 'Hawaii', 'Nevada', 'Utah'];
 
   late final locationSettingsWidget = DropdownButtonFormField(
-      key: Key('profileLocation'),
+      key: Key('profilelocation'),
       alignment: Alignment.center,
       decoration: InputDecoration(
           border: InputBorder.none,
@@ -189,7 +189,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
             textAlign: TextAlign.center,
           ),
           CheckboxListTile(
-            key: Key('activitySkiing'),
+            key: Key('activityskiing'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
             title: const Text('Skiing'),
@@ -203,7 +203,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
           ),
           CheckboxListTile(
             //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activityHiking'),
+            key: Key('activityhiking'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
             title: const Text('Hiking'),
@@ -217,7 +217,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
           ),
           CheckboxListTile(
             //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activitySwimming'),
+            key: Key('activityswimming'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
             title: const Text('Swimming'),
@@ -231,7 +231,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
           ),
           CheckboxListTile(
             //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activityDancing'),
+            key: Key('activitydancing'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
             title: const Text('Dancing'),
@@ -245,7 +245,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
           ),
           CheckboxListTile(
             //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activityFootball'),
+            key: Key('activityfootball'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
             title: const Text('Football'),
@@ -280,7 +280,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
             locationSettingsWidget,
             activitySettingsWidget,
             ElevatedButton(
-              key: Key('updateProfileButton'),
+              key: Key('updateprofilebutton'),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(200, 60),
                 maximumSize: const Size(200, 60),
