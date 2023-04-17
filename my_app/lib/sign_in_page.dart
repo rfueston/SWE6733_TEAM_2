@@ -29,7 +29,7 @@ class _MySignInPage extends State<SignInPage> {
         Navigator.push(
           context,
           // MaterialPageRoute(builder: (context) => const MyAdventureQuestHome()),
-          MaterialPageRoute(builder: (context) => const MyProfileLayoutTest()),
+          MaterialPageRoute(builder: (context) => const MyAdventureQuestProfilePage()),
         );
       });
     } else {

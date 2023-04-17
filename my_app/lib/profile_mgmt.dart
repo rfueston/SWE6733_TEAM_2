@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
-import 'account_sign_in.dart';
 
 class ProfileMgmtPage extends StatefulWidget {
   const ProfileMgmtPage({super.key});
@@ -11,7 +10,7 @@ class ProfileMgmtPage extends StatefulWidget {
 
 class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   // Bio settings
-  //picture
+  // myPicture
   final myControllerBio = TextEditingController();
   // Account settings
   final myControllerUsername = TextEditingController();
@@ -28,13 +27,17 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   final myControllerFootball = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+  }
+
   void dispose() {
     // Bio settings
-    // picture
+    // myPicture
     myControllerBio.dispose();
     // Account settings
-    // myControllerUsername.dispose();
-    // myControllerPassword.dispose();
+    myControllerUsername.dispose();
+    myControllerPassword.dispose();
     myControllerDOB.dispose();
     myControllerEmail.dispose();
     // Location settings
@@ -49,26 +52,119 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   }
 
   Future<void> _updateProfile() async {
-/*     var acceptedAcount = AccountSignIn()
-        .accountSignIn(myControllerUsername.text, myControllerPassword.text); */
-
-    //if (await acceptedAcount == true) {
     setState(() {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const MyAdventureQuestHome()),
       );
     });
-/*     } else {
-      setState(() {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => const MyAdventureQuestSignIn()),
-        );
-      });
-    } */
   }
+
+  late final bioWidget =
+      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+    const Text(
+      'Bio Section',
+      textAlign: TextAlign.start,
+    ),
+    const Image(
+      key: Key('profilePic'),
+      width: 300.0,
+      image: NetworkImage(
+          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+    ),
+    const Text('\n'),
+    SizedBox(
+      width: 600.0,
+      child: TextField(
+        key: Key('profileBio'),
+        controller: myControllerBio,
+        maxLength: 1000,
+        obscureText: false,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'My Bio',
+        ),
+      ),
+    ),
+  ]);
+
+  late final accountSettingsWidget =
+      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+    const Text(
+      'Account Settings',
+      textAlign: TextAlign.start,
+    ),
+    SizedBox(
+      width: 300.0,
+      child: TextField(
+        key: Key('profileUsername'),
+        enabled: false,
+        controller: myControllerDOB,
+        maxLength: 40,
+        obscureText: false,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Username',
+        ),
+      ),
+    ),
+    SizedBox(
+      width: 300.0,
+      child: TextField(
+        key: Key('profilePassword'),
+        enabled: false,
+        controller: myControllerEmail,
+        maxLength: 40,
+        obscureText: true,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Password',
+        ),
+      ),
+    ),
+    SizedBox(
+      width: 300.0,
+      child: TextField(
+        key: Key('profileDOB'),
+        controller: myControllerDOB,
+        maxLength: 40,
+        obscureText: false,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'DOB',
+        ),
+      ),
+    ),
+    SizedBox(
+      width: 300.0,
+      child: TextField(
+        key: Key('profileEmail'),
+        controller: myControllerEmail,
+        maxLength: 40,
+        obscureText: true,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Email',
+        ),
+      ),
+    ),
+  ]);
+
+  late final locationSettingsWidget =
+      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+    const Text(
+      'Location Settings',
+      textAlign: TextAlign.start,
+    ),
+  ]);
+
+  late final activitiesSettingsWidget =
+      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+    const Text(
+      'Activities Settings',
+      textAlign: TextAlign.start,
+    ),
+  ]);
 
   @override
   Widget build(BuildContext context) {
@@ -77,47 +173,14 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
         title: const Text(""),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          shrinkWrap: true,
           children: <Widget>[
-            const Text(
-              'My AdventureQuest Profile',
-              textAlign: TextAlign.start,
-            ),
+            bioWidget,
             const Text('\n'),
-            const Image(
-              key: Key('profilePic'),
-              width: 300.0,
-              image: NetworkImage(
-                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-            ),
-            const Text('\n'),
-            SizedBox(
-              width: 600.0,
-              child: TextField(
-                key: Key('profileBio'),
-                controller: myControllerBio,
-                maxLength: 1000,
-                obscureText: false,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'My Bio',
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 300.0,
-              child: TextField(
-                key: Key('profileDOB'),
-                controller: myControllerPassword,
-                maxLength: 40,
-                obscureText: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password',
-                ),
-              ),
-            ),
+            accountSettingsWidget,
+            locationSettingsWidget,
+            activitiesSettingsWidget,
             ElevatedButton(
               key: Key('updateProfileButton'),
               style: ElevatedButton.styleFrom(
