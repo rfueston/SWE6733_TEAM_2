@@ -10,7 +10,7 @@ class ProfileLayoutTest extends StatefulWidget {
 
 class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
   // Bio settings
-  //picture
+  // myPicture
   final myControllerBio = TextEditingController();
   // Account settings
   final myControllerUsername = TextEditingController();
@@ -33,7 +33,7 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
 
   void dispose() {
     // Bio settings
-    // picture
+    // myPicture
     myControllerBio.dispose();
     // Account settings
     myControllerUsername.dispose();
@@ -52,25 +52,12 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
   }
 
   Future<void> _updateProfile() async {
-/*     var acceptedAcount = AccountSignIn()
-        .accountSignIn(myControllerUsername.text, myControllerPassword.text); */
-
-    //if (await acceptedAcount == true) {
     setState(() {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const MyAdventureQuestHome()),
       );
     });
-/*     } else {
-      setState(() {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => const MyAdventureQuestSignIn()),
-        );
-      });
-    } */
   }
 
   late final bioWidget =
@@ -79,7 +66,6 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
       'Bio Section',
       textAlign: TextAlign.start,
     ),
-    const Text('\n'),
     const Image(
       key: Key('profilePic'),
       width: 300.0,
@@ -91,7 +77,7 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
       width: 600.0,
       child: TextField(
         key: Key('profileBio'),
-        //controller: myControllerBio,
+        controller: myControllerBio,
         maxLength: 1000,
         obscureText: false,
         decoration: InputDecoration(
@@ -189,21 +175,12 @@ class _MyProfileLayoutTest extends State<ProfileLayoutTest> {
       body: Center(
         child: ListView(
           shrinkWrap: true,
-          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             bioWidget,
             const Text('\n'),
-            //Container(
-            //  padding: const EdgeInsets.all(20),
-            //  child: Row(
-            //    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //    children: [
-                  accountSettingsWidget,
-                  locationSettingsWidget,
-                  activitiesSettingsWidget,
-            //    ],
-            //  ),
-            //),
+            accountSettingsWidget,
+            locationSettingsWidget,
+            activitiesSettingsWidget,
             ElevatedButton(
               key: Key('updateProfileButton'),
               style: ElevatedButton.styleFrom(
