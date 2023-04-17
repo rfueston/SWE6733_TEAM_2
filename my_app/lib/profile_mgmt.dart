@@ -60,6 +60,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     });
   }
 
+//
   late final bioWidget =
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
     const Text(
@@ -87,7 +88,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
       ),
     ),
   ]);
-
+//
   late final accountSettingsWidget =
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
     const Text(
@@ -149,23 +150,117 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
       ),
     ),
   ]);
+//
+  String dropDownValue = 'Georgia';
+  var items = ['Georgia', 'Florida', 'Hawaii', 'Nevada', 'Utah'];
 
-  late final locationSettingsWidget =
-      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-    const Text(
-      'Location Settings',
-      textAlign: TextAlign.start,
-    ),
-  ]);
+  late final locationSettingsWidget = DropdownButtonFormField(
+      key: Key('profileLocation'),
+      alignment: Alignment.center,
+      decoration: InputDecoration(
+          border: InputBorder.none,
+          contentPadding: EdgeInsets.only(left: 150.0, right: 150.0)),
+      value: dropDownValue,
+      items: items.map((String items) {
+        return DropdownMenuItem(
+          value: items,
+          child: Text(items),
+        );
+      }).toList(),
+      onChanged: (String? newValue) {
+        setState(() {
+          dropDownValue = newValue!;
+        });
+      });
+//
+  bool valueSkiing = false;
+  bool valueHiking = false;
+  bool valueSwimming = false;
+  bool valueDancing = false;
+  bool valueFootball = false;
 
-  late final activitiesSettingsWidget =
-      Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-    const Text(
-      'Activities Settings',
-      textAlign: TextAlign.start,
-    ),
-  ]);
-
+  late final activitySettingsWidget =
+      StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
+    return Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+          const Text(
+            'Activity Settings',
+            textAlign: TextAlign.center,
+          ),
+          CheckboxListTile(
+            key: Key('activitySkiing'),
+            contentPadding: EdgeInsets.only(left: 150, right: 150),
+            secondary: const Icon(Icons.sports),
+            title: const Text('Skiing'),
+            selected: valueSkiing,
+            value: valueSkiing,
+            onChanged: (value) {
+              setState(() {
+                valueSkiing = value!;
+              });
+            },
+          ),
+          CheckboxListTile(
+            //controlAffinity: ListTileControlAffinity.trailing,
+            key: Key('activityHiking'),
+            contentPadding: EdgeInsets.only(left: 150, right: 150),
+            secondary: const Icon(Icons.sports),
+            title: const Text('Hiking'),
+            selected: valueHiking,
+            value: valueHiking,
+            onChanged: (value) {
+              setState(() {
+                valueHiking = value!;
+              });
+            },
+          ),
+          CheckboxListTile(
+            //controlAffinity: ListTileControlAffinity.trailing,
+            key: Key('activitySwimming'),
+            contentPadding: EdgeInsets.only(left: 150, right: 150),
+            secondary: const Icon(Icons.sports),
+            title: const Text('Swimming'),
+            selected: valueSwimming,
+            value: valueSwimming,
+            onChanged: (value) {
+              setState(() {
+                valueSwimming = value!;
+              });
+            },
+          ),
+          CheckboxListTile(
+            //controlAffinity: ListTileControlAffinity.trailing,
+            key: Key('activityDancing'),
+            contentPadding: EdgeInsets.only(left: 150, right: 150),
+            secondary: const Icon(Icons.sports),
+            title: const Text('Dancing'),
+            selected: valueDancing,
+            value: valueDancing,
+            onChanged: (value) {
+              setState(() {
+                valueDancing = value!;
+              });
+            },
+          ),
+          CheckboxListTile(
+            //controlAffinity: ListTileControlAffinity.trailing,
+            key: Key('activityFootball'),
+            contentPadding: EdgeInsets.only(left: 150, right: 150),
+            secondary: const Icon(Icons.sports),
+            title: const Text('Football'),
+            selected: valueFootball,
+            value: valueFootball,
+            onChanged: (value) {
+              setState(() {
+                valueFootball = value!;
+              });
+            },
+          ),
+        ]));
+  });
+//
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -179,13 +274,17 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
             bioWidget,
             const Text('\n'),
             accountSettingsWidget,
+            const Text(
+              'Location Settings',
+              textAlign: TextAlign.center,
+            ),
             locationSettingsWidget,
-            activitiesSettingsWidget,
+            activitySettingsWidget,
             ElevatedButton(
               key: Key('updateProfileButton'),
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(300, 60),
-                maximumSize: const Size(300, 60),
+                minimumSize: const Size(200, 60),
+                maximumSize: const Size(200, 60),
               ),
               onPressed: _updateProfile,
               child: const Text('UPDATE'),
