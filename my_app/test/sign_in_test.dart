@@ -26,12 +26,12 @@ void main() async{
     expect(find.text('Welcome To AdventureQuest'), findsOneWidget);
 
     // enter text
-    await tester.enterText(find.byKey(Key('siginusername')), 'rfueston');
+    await tester.enterText(find.byKey(Key('signinusername')), 'rfueston');
     await tester.pump();
-    await tester.enterText(find.byKey(Key('siginpassword')), 'test1');
+    await tester.enterText(find.byKey(Key('signinpassword')), 'test1');
     await tester.pump();
 
-    expect(find.byKey(Key('siginbutton')), findsOneWidget);
+    expect(find.byKey(Key('signinbutton')), findsOneWidget);
 
   });
 

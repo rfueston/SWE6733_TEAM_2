@@ -10,6 +10,8 @@ import 'reset_password_page.dart';
 import 'terms_page.dart';
 import 'sign_in_page.dart';
 import 'home_page.dart';
+import 'profile_mgmt.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -128,6 +130,25 @@ class MyResetPasswordPage extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         ),
         home: ResetPasswordPage(),
+      ),
+    );
+  }
+}
+
+class MyAdventureQuestProfilePage extends StatelessWidget {
+  const MyAdventureQuestProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: ProfileMgmtPage(),
       ),
     );
   }
