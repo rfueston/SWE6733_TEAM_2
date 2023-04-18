@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
       'Matches will be displayed here',
       style: optionStyle,
     ),
+    const MyAdventureQuestRatings(),
     Text(
       'Chats will be displayed here',
       style: optionStyle,
@@ -71,6 +72,11 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_outlined),
             label: 'Likes',
+            backgroundColor: Colors.pink,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.radar),
+            label: 'Ratings',
             backgroundColor: Colors.pink,
           ),
           BottomNavigationBarItem(

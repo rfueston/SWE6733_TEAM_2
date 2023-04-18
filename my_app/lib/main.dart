@@ -12,6 +12,8 @@ import 'home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'adventure_rating_page.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -99,6 +101,25 @@ class MyAdventureQuestAccountPage extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         ),
         home: CreateAccountPage(),
+      ),
+    );
+  }
+}
+
+class MyAdventureQuestRatings extends StatelessWidget {
+  const MyAdventureQuestRatings({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: AdventureRatingPage(),
       ),
     );
   }
