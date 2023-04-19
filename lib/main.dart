@@ -145,6 +145,7 @@ class MyAdventureQuestMyMatches extends StatelessWidget {
       ),
     );
   }
+}
 
 class MyResetPasswordPage extends StatelessWidget {
   const MyResetPasswordPage({super.key});

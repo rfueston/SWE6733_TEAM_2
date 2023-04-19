@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'main.dart';
 import 'match_page.dart';
 import 'profile_mgmt.dart';
-
+import 'msg_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,10 +23,7 @@ class _HomePageState extends State<HomePage> {
       style: optionStyle,
     ),
     const MyAdventureQuestRatings(),
-    Text(
-      'Chats will be displayed here',
-      style: optionStyle,
-    ),
+    const MsgPage(),
     const ProfileMgmtPage(),
   ];
 
@@ -44,6 +41,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Discover Adventure'),
+        backgroundColor: Colors.lightGreen,
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),

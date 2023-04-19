@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-
+import 'home_page.dart';
+import 'main.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'match_hiking_page.dart';
 
 class Activity {
   final int? preference;
@@ -98,7 +102,7 @@ class MyMatches extends StatelessWidget {
                 ),
                 body: TabBarView(
                   children: [
-                    Icon(Icons.hiking_outlined, size: 350),
+                    const MyMatchHiking(),
                     Icon(Icons.directions_bike_outlined, size: 350),
                     Icon(Icons.directions_run_outlined, size: 350),
                     Icon(Icons.downhill_skiing_outlined, size: 350),
@@ -112,3 +116,21 @@ class MyMatches extends StatelessWidget {
   }
 }
 
+class MyMatchHiking extends StatelessWidget {
+  const MyMatchHiking({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: MatchHikingPage(),
+      ),
+    );
+  }
+}

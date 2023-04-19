@@ -1,5 +1,5 @@
 import 'dart:html';
-
+import 'account_sign_in.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
@@ -7,6 +7,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 const List<String> rating = ["0","1","2","3","4","5","6","7","8","9","10"];
 const user = "sdu1";
+//add user at log in from getter
+// final user = AccountSignIn.getglobalAccountUsername;
+
 
 class Adventure {
   final String? id;
