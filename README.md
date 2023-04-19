@@ -70,21 +70,21 @@ Our Projects backlog is organized with dependencies, application workflow, and t
 Our team forecasted that we could complete 35 story points this sprint. That is almost 6 points per person and is a conservative number of points since this is our first sprint. We have decided that since none of us our familiar with our tech stack that we may run into blockers and should not pull too much into this sprint in case we do have issues. If this sprint goes well, we will consider adding more the next sprint. This is the minimum we felt we could add and still have a working prototype to demo at the end of the sprint.
 
 Sprint 1 Backlog: 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Backlog.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_Backlog.png)
 
 <h2>Sprint Board</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Board.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_Board.png)
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_completed.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_completed.png)
 
 <h2>Sprint 1 Burndown Chart</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_Burndown.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_Burndown.png)
 
 <h2>Sprint Daily Scrum Standup Meeeting</h2>
 
@@ -93,20 +93,20 @@ https://youtu.be/w4XxaFh6ZWQ
 <h2>Paired and Mobbed Programming</h2>
 
 Paired Programming!
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Paired_Sprint_1.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Paired_Sprint_1.png)
 
 Mob Programming!
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/mobbing_Sprint_1.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/mobbing_Sprint_1.png)
 
 <h2>A-TDD Results</h2>
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_LOGIN_PAGE.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/ATDD_LOGIN_PAGE.png)
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_SIGNIN_PAGE.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/ATDD_SIGNIN_PAGE.png)
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_CREATE_ACCOUNT_PAGE.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/ATDD_CREATE_ACCOUNT_PAGE.png)
 
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/ATDD_HOME_PAGE.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/ATDD_HOME_PAGE.png)
 
 <h2>Sprint Review and Sprint Retrospective</h2>
 
@@ -117,7 +117,7 @@ https://youtu.be/-b6qb7F4zNQ
 Sprint Retro:
 
 https://youtu.be/yeJrb3i-Zj0
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1_retro.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_retro.png)
 
 
 <h2>Prototype Link</h2>
