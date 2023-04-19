@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 #       - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SWE6733_ADVENTURE_QUEST }}'
-          projectId: swe6733-adventure-quest
+#       - uses: FirebaseExtended/action-hosting-deploy@v0
+#         with:
+#           repoToken: '${{ secrets.GITHUB_TOKEN }}'
+#           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SWE6733_ADVENTURE_QUEST }}'
+#           projectId: swe6733-adventure-quest
