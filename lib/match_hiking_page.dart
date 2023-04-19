@@ -25,17 +25,17 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
   List<User> _matchingUsers = [
     User(
       name: 'Talia',
-      photoUrl: 'user1.jpeg',
+      photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/0.jpg',
       bio: 'I love hiking and exploring new places!',
     ),
     User(
       name: 'Scott',
-      photoUrl: 'user2.jpeg',
+      photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/1.jpg',
       bio: 'I love hiking and exploring new places!',
     ),
     User(
       name: 'Abel',
-      photoUrl: 'user3.jpeg',
+      photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/5.jpg',
       bio: 'I love hiking and exploring new places!',
     ),
   ];
@@ -76,7 +76,8 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(user.name),
-                      Image.network(user.photoUrl),
+                      Image.asset(user.photoUrl),
+                      // Image.network(user.photoUrl),
                       Text(user.bio),
                     ],
                   ),
