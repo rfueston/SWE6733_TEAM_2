@@ -5,6 +5,9 @@ import 'home_page.dart';
 import 'main.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+// import 'liked_page.dart';
+
 
 class MatchHikingPage extends StatefulWidget {
   const MatchHikingPage({super.key});
@@ -18,69 +21,147 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
     //logic to add matched user to friends list
   }
 
+  int _currentIndex = 0;
+  List<User> _matchingUsers = [
+    User(
+      name: 'Talia',
+      photoUrl: 'user1.jpeg',
+      bio: 'I love hiking and exploring new places!',
+    ),
+    User(
+      name: 'Scott',
+      photoUrl: 'user2.jpeg',
+      bio: 'I love hiking and exploring new places!',
+    ),
+    User(
+      name: 'Abel',
+      photoUrl: 'user3.jpeg',
+      bio: 'I love hiking and exploring new places!',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(""),
-      ),
-      body: Center(
-        child: Column(
+      appBar: AppBar(title: Text('Matching Users')),
+      body: _matchingUsers.isNotEmpty
+          ? _buildCarouselSlider()
+          : _buildLoadingIndicator(),
+    );
+  }
+
+  Widget _buildCarouselSlider() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CarouselSlider(
+          key: UniqueKey(),
+          options: CarouselOptions(
+            height: 400,
+            viewportFraction: 0.8,
+            initialPage: _currentIndex,
+            enableInfiniteScroll: false,
+            reverse: false,
+            onPageChanged: (index, reason) {
+              setState(() {
+                _currentIndex = index;
+              });
+            },
+          ),
+          items: _matchingUsers.map((user) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(user.name),
+                      Image.network(user.photoUrl),
+                      Text(user.bio),
+                    ],
+                  ),
+                );
+              },
+            );
+          }).toList(),
+        ),
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Please select one of your matches!'),
-            Container(
-              child: Row(
-                children: [
-                  Radio(
-                      value: "Richard",
-                      groupValue: "matched",
-                      onChanged: (value) {
-                        print(value); //selected value
-                      }),
-                  const Text("Richard, is richard"),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Radio(
-                      value: "Talia",
-                      groupValue: "matched",
-                      onChanged: (value) {
-                        print(value); //selected value
-                      }),
-                  const Text(
-                      "Talia, talia loves to hike her rating for hiking is 5! she lives near by!"),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Radio(
-                      value: "Scott",
-                      groupValue: "matched",
-                      onChanged: (value) {
-                        print(value); //selected value
-                      }),
-                  const Text("Scott, scott loves to fish"),
-                ],
-              ),
-            ),
+          children: [
             ElevatedButton(
-              key: Key('addMatch'),
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(300, 60),
-                maximumSize: const Size(300, 60),
-              ),
-              onPressed: _addMatchedUser,
-              child: const Text('ADD'),
+              onPressed: () {
+                _swipeLeft();
+              },
+              child: Text('Nope'),
+            ),
+            SizedBox(width: 16),
+            ElevatedButton(
+              onPressed: () {
+                _swipeRight();
+              },
+              child: Text('Like'),
             ),
           ],
         ),
-      ),
+      ],
     );
   }
+
+  void _swipeLeft() {
+    setState(() {
+      if (_currentIndex > 0) {
+        _currentIndex--;
+      } else {
+        // If we're at the first user, loop around to the last user
+        _currentIndex = _matchingUsers.length - 1;
+      }
+    });
+  }
+
+  // void _swipeRight() {
+  //   setState(() {
+  //     if (_currentIndex < _matchingUsers.length - 1) {
+  //       _currentIndex++;
+  //     } else {
+  //       // If we're at the last user, loop around to the first user
+  //       _currentIndex = 0;
+  //     }
+  //   });
+  // }
+
+  void _swipeRight() {
+    // setState(() {
+    //   if (_currentIndex < _matchingUsers.length - 1) {
+    //     _currentIndex++;
+    //   } else {
+    //     // If we're at the last user, loop around to the first user
+    //     _currentIndex = 0;
+    //   }
+    // });
+    //
+    // // Navigate to the ProfilePage with the selected user
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //       builder: (context) => LikedPage(user: _matchingUsers[_currentIndex])),
+    // );
+  }
+
+  Widget _buildLoadingIndicator() {
+    return Center(
+      child: CircularProgressIndicator(),
+    );
+  }
+}
+
+class User {
+  final String name;
+  final String photoUrl;
+  final String bio;
+
+  User({
+    required this.name,
+    required this.photoUrl,
+    required this.bio,
+  });
 }
