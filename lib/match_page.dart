@@ -106,10 +106,10 @@ class MyMatches extends StatelessWidget {
                 ),
                 body: TabBarView(
                   children: [
-                    matchedHikingTab == true ? Icon(Icons.hiking_outlined, size: 350) : const MyMatchHiking(),
-                    matchedBikeTab == true ? Icon(Icons.directions_bike_outlined, size: 350) : const MyMatchBike(),
-                    matchedRunTab == true ? Icon(Icons.directions_run_outlined, size: 350) : const MyMatchRun(),
-                    matchedSkiingTab == true ? Icon(Icons.downhill_skiing_outlined, size: 350) : const MyMatchSkiing(),
+                    matchedHikingTab == false ? Icon(Icons.hiking_outlined, size: 350) : const MyMatchHiking(),
+                    matchedBikeTab == false ? Icon(Icons.directions_bike_outlined, size: 350) : const MyMatchBike(),
+                    matchedRunTab == false ? Icon(Icons.directions_run_outlined, size: 350) : const MyMatchRun(),
+                    matchedSkiingTab == false ? Icon(Icons.downhill_skiing_outlined, size: 350) : const MyMatchSkiing(),
                   ],
                 ),
               ),
