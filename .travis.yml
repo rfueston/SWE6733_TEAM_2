@@ -1,0 +1,19 @@
+language: dart
+dart:
+  - stable
+
+install:
+  # https://flutter.dev/docs/get-started/web
+  - echo "Configure Flutter"
+  - git clone https://github.com/flutter/flutter.git -b beta
+  - export PATH="$PATH:`pwd`/flutter/bin"
+  - flutter upgrade
+  - flutter config --enable-web
+  - flutter doctor
+
+script:
+  - flutter build web
+  - echo "deploying"
+
+after_success:
+  - firebase deploy --token 1//01v5y6o1PlSA4CgYIARAAGAESNwF-L9IrcJA3OhLGahGVhCqFc8mWux1_Mgom4EdoD_DD39yLUA7Ok4NeIK9ujahiU557nKZvhpw
