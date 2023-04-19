@@ -10,6 +10,7 @@ import 'terms_page.dart';
 import 'sign_in_page.dart';
 import 'home_page.dart';
 import 'profile_mgmt.dart';
+import 'match_page.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -20,7 +21,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: FirebaseOptions(
-        apiKey: "HIDDEN",
+        apiKey: "AIzaSyDT54N0ip5rYdUfqsfnA2AqejCsorFJX1Y",
         appId: "1:1016369170311:web:f97f3acb68dadae50b7522",
         messagingSenderId: "1016369170311",
         projectId: "swe6733-adventure-quest",
@@ -126,6 +127,24 @@ class MyAdventureQuestRatings extends StatelessWidget {
     );
   }
 }
+
+class MyAdventureQuestMyMatches extends StatelessWidget {
+  const MyAdventureQuestMyMatches({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: MyMatches(),
+      ),
+    );
+  }
 
 class MyResetPasswordPage extends StatelessWidget {
   const MyResetPasswordPage({super.key});

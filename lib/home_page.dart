@@ -3,6 +3,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'main.dart';
+import 'match_page.dart';
+import 'profile_mgmt.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,12 +17,9 @@ class _HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 15, fontWeight: FontWeight.normal);
   static const List<Widget> _widgetOptions = <Widget>[
+    const MyMatches(),
     Text(
-      'Profiles will be displayed here',
-      style: optionStyle,
-    ),
-    Text(
-      'Matches will be displayed here',
+      'Liked profiles will be displayed here',
       style: optionStyle,
     ),
     const MyAdventureQuestRatings(),
@@ -27,10 +27,7 @@ class _HomePageState extends State<HomePage> {
       'Chats will be displayed here',
       style: optionStyle,
     ),
-    Text(
-      'User profile will be displayed here',
-      style: optionStyle,
-    ),
+    const ProfileMgmtPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -47,16 +44,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Discover Adventure'),
-        actions: <Widget>[
-          const IconButton(
-            onPressed: null,
-            icon: Icon(Icons.undo_outlined),
-          ),
-          const IconButton(
-            onPressed: null,
-            icon: Icon(Icons.tune_outlined),
-          ),
-        ],
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -67,31 +54,31 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.travel_explore_outlined),
             label: 'Discover',
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.lightGreen,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_outlined),
             label: 'Likes',
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.lightGreen,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.radar),
             label: 'Ratings',
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.lightGreen,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_bubble_outline_outlined),
             label: 'Chat',
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.lightGreen,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outlined),
             label: 'Profile',
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.lightGreen,
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.lightGreen[900],
         onTap: _onItemTapped,
       ),
     );
