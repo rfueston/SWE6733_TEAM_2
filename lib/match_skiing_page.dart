@@ -6,14 +6,14 @@ import 'main.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class MatchHikingPage extends StatefulWidget {
-  const MatchHikingPage({super.key});
+class MatchSkiingPage extends StatefulWidget {
+  const MatchSkiingPage({super.key});
 
   @override
-  State<MatchHikingPage> createState() => _MyMatchHikingPage();
+  State<MatchSkiingPage> createState() => _MyMatchSkiingPage();
 }
 
-class _MyMatchHikingPage extends State<MatchHikingPage> {
+class _MyMatchSkiingPage extends State<MatchSkiingPage> {
   Future<void> _addMatchedUser() async {
     //logic to add matched user to friends list
   }
@@ -38,7 +38,7 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
                       onChanged: (value) {
                         print(value); //selected value
                       }),
-                  const Text("Richard, is richard"),
+                  const Text("Richard, is not rich"),
                 ],
               ),
             ),

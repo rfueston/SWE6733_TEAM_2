@@ -6,6 +6,10 @@ import 'main.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'match_hiking_page.dart';
+import 'match_bike_page.dart';
+import 'match_run_page.dart';
+import 'match_skiing_page.dart';
+
 
 class Activity {
   final int? preference;
@@ -60,7 +64,7 @@ class MyMatches extends StatelessWidget {
 
   static const String _title = 'Matches';
 
-
+  final matchedTab = false;
 
   @override
   Widget build(BuildContext context) {
@@ -102,10 +106,10 @@ class MyMatches extends StatelessWidget {
                 ),
                 body: TabBarView(
                   children: [
-                    const MyMatchHiking(),
-                    Icon(Icons.directions_bike_outlined, size: 350),
-                    Icon(Icons.directions_run_outlined, size: 350),
-                    Icon(Icons.downhill_skiing_outlined, size: 350),
+                    matchedTab == true ? Icon(Icons.hiking_outlined, size: 350) : const MyMatchHiking(),
+                    matchedTab == true ? Icon(Icons.directions_bike_outlined, size: 350) : const MyMatchBike(),
+                    matchedTab == true ? Icon(Icons.directions_run_outlined, size: 350) : const MyMatchRun(),
+                    matchedTab == true ? Icon(Icons.downhill_skiing_outlined, size: 350) : const MyMatchSkiing(),
                   ],
                 ),
               ),
@@ -130,6 +134,63 @@ class MyMatchHiking extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         ),
         home: MatchHikingPage(),
+      ),
+    );
+  }
+}
+
+class MyMatchBike extends StatelessWidget {
+  const MyMatchBike({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: MatchBikePage(),
+      ),
+    );
+  }
+}
+
+class MyMatchRun extends StatelessWidget {
+  const MyMatchRun({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: MatchRunPage(),
+      ),
+    );
+  }
+}
+
+class MyMatchSkiing extends StatelessWidget {
+  const MyMatchSkiing({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: MatchSkiingPage(),
       ),
     );
   }
