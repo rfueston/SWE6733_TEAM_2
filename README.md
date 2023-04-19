@@ -153,7 +153,7 @@ https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 <h2>Paired and Mobbed Programming</h2>
 
 Paired Programming!
-![Screenshot]()
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Screen%20Shot%202023-04-18%20at%209.32.51%20PM.png)
 
 Mob Programming!
 ![Screenshot]()
