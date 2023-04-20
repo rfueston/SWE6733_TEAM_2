@@ -128,7 +128,7 @@ https://swe6733-adventure-quest.web.app
 
 <h2>Sprint 2 Forecast and Rationale</h2>
 
-We were forecasting 26 points for this sprint. considered some of the unknowns going into some of the harder tasks we lowered our points from last sprint. A lot of our tasks are 3-5 points and my not be completed quickly causing blockers for other members. due to this we are limiting out sprint points. Our burndown chart burns up due to issues we had early on with stories blocking other users and needing to work on some parts before other. we learned that we did not make our stories granular enough to be able to unblock others quickly. So, after we realized our error, we broke our stories down into smaller stories to help unblocked the sprint tasks. due to this we also had some rollover into the next sprint. we are still on track to complete out goals for the project, but it has required additional story grooming that we did not original think was required.
+We were forecasting 26 points for this sprint. Considering some of the unknowns going into some of the harder tasks we lowered our points from last sprint. A lot of our tasks are 3-5 points and may not be completed quickly causing blockers for other members. Due to this we are limiting out sprint points. Our burndown chart burns up due to issues we had early on with stories blocking other users and needing to work on some parts before other. We learned that we did not make our stories granular enough to be able to unblock others quickly. So, after we realized our error, we broke our stories down into smaller stories to help unblock the sprint tasks. Due to this we also had some rollover into the next sprint. We are still on track to complete our goals for the project, but it has required additional story grooming that we did not originally think was required.
 
 Sprint 2 Backlog: 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/sprint_2_backlog.png)
@@ -171,7 +171,7 @@ Mob Programming!
 
 <h2>CICD</h2>
 
-rationale: We went with travis CI to build our app and deploy to firestore. It is a linux bases system that is free is easy to plug into github. It also has a lot of power to run whatever the teams needs with flutter due to it being a linux machine.   
+rationale: We went with travis CI to build our app and deploy to firestore. It is a linux based system that is free and easy to plug into github. It also has a lot of power to run whatever the team needs with flutter due to it being a linux machine.   
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/CICD_w.png)
 
