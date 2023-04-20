@@ -52,28 +52,15 @@ class _MyMatchBikePage extends State<MatchBikePage> {
                         print(value); //selected value
                       }),
                   const Text(
-                      "Talia, talia loves to hike her rating for hiking is 5! she lives near by!"),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Radio(
-                      value: "Scott",
-                      groupValue: "matched",
-                      onChanged: (value) {
-                        print(value); //selected value
-                      }),
-                  const Text("Scott, scott loves to fish"),
+                      "Talia"),
                 ],
               ),
             ),
             ElevatedButton(
               key: Key('addMatch'),
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(300, 60),
-                maximumSize: const Size(300, 60),
+                minimumSize: const Size(150, 60),
+                maximumSize: const Size(150, 60),
               ),
               onPressed: _addMatchedUser,
               child: const Text('ADD'),

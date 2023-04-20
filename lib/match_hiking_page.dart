@@ -31,12 +31,12 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
     User(
       name: 'Scott',
       photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/1.jpg',
-      bio: 'I love hiking and exploring new places!',
+      bio: 'I love hiking',
     ),
     User(
       name: 'Abel',
       photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/5.jpg',
-      bio: 'I love hiking and exploring new places!',
+      bio: 'I love exploring new places!',
     ),
   ];
 
@@ -51,7 +51,8 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
   }
 
   Widget _buildCarouselSlider() {
-    return Column(
+    return SingleChildScrollView(
+      child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CarouselSlider(
@@ -105,6 +106,7 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
           ],
         ),
       ],
+    ),
     );
   }
 
@@ -144,7 +146,8 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
     // Navigator.push(
     //   context,
     //   MaterialPageRoute(
-    //       builder: (context) => LikedPage(user: _matchingUsers[_currentIndex])),
+    //       builder: (context) => LikedPage(user:
+    //       _matchingUsers[_currentIndex])),
     // );
   }
 
