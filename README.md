@@ -82,6 +82,8 @@ https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
 <h2>Sprint 1 Burndown Chart</h2>
 
+rationale: 
+
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_Burndown.png)
@@ -166,6 +168,14 @@ Mob Programming!
 ![Screenshot]()
 ![Screenshot]()
 ![Screenshot]()
+
+<h2>CICD</h2>
+
+rationale: 
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/CICD_w.png)
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/CICD_2_Passed.png)
 
 <h2>Sprint Review and Sprint Retrospective</h2>
 
