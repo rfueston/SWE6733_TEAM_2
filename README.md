@@ -177,6 +177,12 @@ rationale: We went with travis CI to build our app and deploy to firestore. It i
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/CICD_2_Passed.png)
 
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/travis_ci.png)
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/travis_ci_green.png)
+
+
+
 <h2>Sprint Review and Sprint Retrospective</h2>
 
 Sprint Review:
