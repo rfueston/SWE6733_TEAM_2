@@ -121,15 +121,15 @@ class _WidgetSetupState extends State<WidgetSetup> {
   String _currentRunningPreference = "0";
   String _currentRunningSkill = "0";
 
-  bool _currentBikingGroupInit = true;
-  bool _currentBikingPreferenceInit = true;
-  bool _currentBikingSkillInit = true;
-  bool _currentHikingGroupInit = true;
-  bool _currentHikingPreferenceInit = true;
-  bool _currentHikingSkillInit = true;
-  bool _currentRunningGroupInit = true;
-  bool _currentRunningPreferenceInit = true;
-  bool _currentRunningSkillInit = true;
+  // bool _currentBikingGroupInit = true;
+  // bool _currentBikingPreferenceInit = true;
+  // bool _currentBikingSkillInit = true;
+  // bool _currentHikingGroupInit = true;
+  // bool _currentHikingPreferenceInit = true;
+  // bool _currentHikingSkillInit = true;
+  // bool _currentRunningGroupInit = true;
+  // bool _currentRunningPreferenceInit = true;
+  // bool _currentRunningSkillInit = true;
 
   double mainActivityTextSize = 20;
 
