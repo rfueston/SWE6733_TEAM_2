@@ -1,8 +1,8 @@
-import 'dart:html';
-import 'account_sign_in.dart';
-import 'package:flutter/gestures.dart';
+//import 'dart:html';
+//import 'account_sign_in.dart';
+//import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
+//import 'main.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 const List<String> rating = ["0","1","2","3","4","5","6","7","8","9","10"];
@@ -227,7 +227,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                     // This is called when the user selects an item.
                                     setState(() {
                                       udpateMyAdventure(_docBiking!, _attrPreference, int.parse(value!));
-                                      _currentBikingPreference = value!;
+                                      _currentBikingPreference = value;
                                     });
                                   },
 
@@ -256,7 +256,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docBiking!, _attrSkill, int.parse(value!));
-                                    _currentBikingSkill = value!;
+                                    _currentBikingSkill = value;
                                   });
                                 },
                               ),
@@ -284,7 +284,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docBiking!, _attrGroup, int.parse(value!));
-                                    _currentBikingGroup = value!;
+                                    _currentBikingGroup = value;
                                   });
                                 },
                               ),
@@ -319,7 +319,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docHiking!, _attrPreference, int.parse(value!));
-                                    _currentHikingPreference = value!;
+                                    _currentHikingPreference = value;
                                   });
                                 },
                               ),
@@ -347,7 +347,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docHiking!, _attrSkill, int.parse(value!));
-                                    _currentHikingSkill = value!;
+                                    _currentHikingSkill = value;
                                   });
                                 },
                               ),
@@ -375,7 +375,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docHiking!, _attrGroup, int.parse(value!));
-                                    _currentHikingGroup = value!;
+                                    _currentHikingGroup = value;
                                   });
                                 },
                               ),
@@ -410,7 +410,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docRunning!, _attrPreference, int.parse(value!));
-                                    _currentRunningPreference = value!;
+                                    _currentRunningPreference = value;
                                   });
                                 },
 
@@ -439,7 +439,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docRunning!, _attrSkill, int.parse(value!));
-                                    _currentRunningSkill = value!;
+                                    _currentRunningSkill = value;
                                   });
                                 },
                               ),
@@ -467,7 +467,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
                                   // This is called when the user selects an item.
                                   setState(() {
                                     udpateMyAdventure(_docRunning!, _attrGroup, int.parse(value!));
-                                    _currentRunningGroup = value!;
+                                    _currentRunningGroup = value;
                                   });
                                 },
                               ),
