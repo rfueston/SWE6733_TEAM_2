@@ -82,8 +82,6 @@ https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
 <h2>Sprint 1 Burndown Chart</h2>
 
-rationale: 
-
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_Burndown.png)
@@ -121,7 +119,6 @@ Sprint Retro:
 https://youtu.be/yeJrb3i-Zj0
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_1/Sprint_1_retro.png)
 
-
 <h2>Prototype Link</h2>
 
 (Current prototype is a Web App. Future plan is to have both iOS and Android (16<) options.)
@@ -131,7 +128,7 @@ https://swe6733-adventure-quest.web.app
 
 <h2>Sprint 2 Forecast and Rationale</h2>
 
-
+We were forecasting 26 points for this sprint. considered some of the unknowns going into some of the harder tasks we lowered our points from last sprint. A lot of our tasks are 3-5 points and my not be completed quickly causing blockers for other members. due to this we are limiting out sprint points. Our burndown chart burns up due to issues we had early on with stories blocking other users and needing to work on some parts before other. we learned that we did not make our stories granular enough to be able to unblock others quickly. So, after we realized our error, we broke our stories down into smaller stories to help unblocked the sprint tasks. due to this we also had some rollover into the next sprint. we are still on track to complete out goals for the project, but it has required additional story grooming that we did not original think was required.
 
 Sprint 2 Backlog: 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/sprint_2_backlog.png)
@@ -164,18 +161,27 @@ Mob Programming!
 
 <h2>A-TDD Results</h2>
 
-![Screenshot]()
-![Screenshot]()
-![Screenshot]()
-![Screenshot]()
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Create_Account_TDD.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Login_TDD.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Matches_TDD.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Profile_TDD.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Chat_ui_TDD.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/sign_in_tdd.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/home_TDD.png)
 
 <h2>CICD</h2>
 
-rationale: 
+rationale: We went with travis CI to build our app and deploy to firestore. It is a linux bases system that is free is easy to plug into github. It also has a lot of power to run whatever the teams needs with flutter due to it being a linux machine.   
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/CICD_w.png)
 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/CICD_2_Passed.png)
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/travis_ci.png)
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/travis_ci_green.png)
+
+
 
 <h2>Sprint Review and Sprint Retrospective</h2>
 
