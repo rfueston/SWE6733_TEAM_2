@@ -121,6 +121,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
   String _currentRunningPreference = "0";
   String _currentRunningSkill = "0";
 
+
   // bool _currentBikingGroupInit = true;
   // bool _currentBikingPreferenceInit = true;
   // bool _currentBikingSkillInit = true;
