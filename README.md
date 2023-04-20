@@ -129,34 +129,36 @@ https://swe6733-adventure-quest.web.app
 
 <h2>Sprint 2 Forecast and Rationale</h2>
 
-Sprint 1 Backlog: 
-![Screenshot]()
+
+
+Sprint 2 Backlog: 
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/sprint_2_backlog.png)
 
 <h2>Sprint Board</h2>
 
 https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
 
-![Screenshot]()
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Srpint_2_completed.png)
 
-![Screenshot]()
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Sprint_2.png)
 
 <h2>Sprint 2 Burndown Chart</h2>
 
-(LINK)
+(https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown)
 
-![Screenshot]()
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Burndown_chart_2.png)
 
 <h2>Sprint Daily Scrum Standup Meeeting</h2>
 
-(LINK)
+(https://youtu.be/xZezhLZwSRE)
 
 <h2>Paired and Mobbed Programming</h2>
 
 Paired Programming!
-![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Screen%20Shot%202023-04-18%20at%209.32.51%20PM.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/paired_2.png)
 
 Mob Programming!
-![Screenshot]()
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/Modded_2.png)
 
 <h2>A-TDD Results</h2>
 
@@ -169,15 +171,14 @@ Mob Programming!
 
 Sprint Review:
 
-(LINK)
+(https://youtu.be/xULj_0-GkN4)
 
 Sprint Retro:
 
-(LINK)
+(https://youtu.be/PIbE-7rhcPM)
 
-![Screenshot]()
-
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_2/RETRO_2.png)
 
 <h2>Prototype Link</h2>
 
-
+Web link: https://swe6733-adventure-quest.web.app
