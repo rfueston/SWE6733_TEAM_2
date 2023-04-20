@@ -39,20 +39,21 @@ class Activity {
   }
 }
 
-class UserRating {
-
-  Future<void> GetUserRating(username, activity) async {
-    final _db = FirebaseFirestore.instance;
-    final snapshot  = await _db.collection("AdventureRatings")
-      .doc(username).collection("MyAdventureRatings")
-      .doc(activity).get();
-
-  print(snapshot.data());
-  print("here");
-
-  }
-}
-FirebaseFirestore db = FirebaseFirestore.instance;
+//TODO update in matching backend task
+// class UserRating {
+//
+//   Future<void> GetUserRating(username, activity) async {
+//     final _db = FirebaseFirestore.instance;
+//     final snapshot  = await _db.collection("AdventureRatings")
+//       .doc(username).collection("MyAdventureRatings")
+//       .doc(activity).get();
+//
+//   print(snapshot.data());
+//   print("here");
+//
+//   }
+// }
+// FirebaseFirestore db = FirebaseFirestore.instance;
 
 
 void main() => runApp(const MyMatches());
@@ -71,15 +72,17 @@ class MyMatches extends StatelessWidget {
     final ButtonStyle style = TextButton.styleFrom(
       foregroundColor: Theme.of(context).colorScheme.onPrimary,
     );
-    CollectionReference ratingRef =
-      FirebaseFirestore.instance.collection('AdventureRatings');
-    Future<void> getData() async {
-      // Get docs from collection reference
-      QuerySnapshot querySnapshot = await ratingRef.get();
-      // Get data from docs and convert map to List
-      final allData = querySnapshot.docs.map((doc) => doc.data()).toList();
-      print(allData);
-    }
+
+    //TODO update in matching backend task
+    // CollectionReference ratingRef =
+    //   FirebaseFirestore.instance.collection('AdventureRatings');
+    // Future<void> getData() async {
+    //   // Get docs from collection reference
+    //   QuerySnapshot querySnapshot = await ratingRef.get();
+    //   // Get data from docs and convert map to List
+    //   final allData = querySnapshot.docs.map((doc) => doc.data()).toList();
+    //   print(allData);
+    // }
     return DefaultTabController(
     length: 4,
     child: Scaffold(

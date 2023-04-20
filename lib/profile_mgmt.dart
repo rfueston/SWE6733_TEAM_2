@@ -23,8 +23,6 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   final myControllerSkiing = TextEditingController();
   final myControllerHiking = TextEditingController();
   final myControllerSwimming = TextEditingController();
-  final myControllerDancing = TextEditingController();
-  final myControllerFootball = TextEditingController();
 
   @override
   void initState() {
@@ -46,8 +44,6 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     myControllerSkiing.dispose();
     myControllerHiking.dispose();
     myControllerSwimming.dispose();
-    myControllerDancing.dispose();
-    myControllerFootball.dispose();
     super.dispose();
   }
 
@@ -69,8 +65,7 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     const Image(
       key: Key('profilepic'),
       width: 300.0,
-      image: NetworkImage(
-          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+      image: AssetImage('/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/user2.jpeg'),
     ),
     const Text('\n'),
     SizedBox(
@@ -175,8 +170,6 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   bool valueSkiing = false;
   bool valueHiking = false;
   bool valueSwimming = false;
-  bool valueDancing = false;
-  bool valueFootball = false;
 
   late final activitySettingsWidget =
       StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
@@ -226,34 +219,6 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
             onChanged: (value) {
               setState(() {
                 valueSwimming = value!;
-              });
-            },
-          ),
-          CheckboxListTile(
-            //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activitydancing'),
-            contentPadding: EdgeInsets.only(left: 150, right: 150),
-            secondary: const Icon(Icons.sports),
-            title: const Text('Dancing'),
-            selected: valueDancing,
-            value: valueDancing,
-            onChanged: (value) {
-              setState(() {
-                valueDancing = value!;
-              });
-            },
-          ),
-          CheckboxListTile(
-            //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activityfootball'),
-            contentPadding: EdgeInsets.only(left: 150, right: 150),
-            secondary: const Icon(Icons.sports),
-            title: const Text('Football'),
-            selected: valueFootball,
-            value: valueFootball,
-            onChanged: (value) {
-              setState(() {
-                valueFootball = value!;
               });
             },
           ),

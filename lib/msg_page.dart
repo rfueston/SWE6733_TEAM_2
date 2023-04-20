@@ -52,7 +52,7 @@ class _MyMsgPageState extends State<MsgPage> {
                     Row(
                       children: <Widget>[
                         CircleAvatar(radius: 45.0,
-                          backgroundImage: AssetImage("https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg"),
+                          backgroundImage: AssetImage("/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/user2.jpeg"),
                         ),
                         SizedBox(width: 20.0),
                         Text("This is a TEST"),
@@ -63,7 +63,7 @@ class _MyMsgPageState extends State<MsgPage> {
                         SizedBox(width: 20.0),
                         Text("This is also TEST  "),
                         CircleAvatar(radius: 45.0,
-                          backgroundImage: AssetImage("https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg"),
+                          backgroundImage: AssetImage("/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/user2.jpeg"),
                         ),
                       ],
                     ),

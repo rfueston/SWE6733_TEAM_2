@@ -1,4 +1,4 @@
-import 'package:english_words/english_words.dart';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'create_account_page.dart';
@@ -11,10 +11,7 @@ import 'sign_in_page.dart';
 import 'home_page.dart';
 import 'profile_mgmt.dart';
 import 'match_page.dart';
-
 import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'adventure_rating_page.dart';
 
 void main() async {
