@@ -4,9 +4,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 const List<String> rating = ["0","1","2","3","4","5","6","7","8","9","10"];
-const user = "sdu1";
+final user = FirebaseAuth.instance.currentUser?.email;
 //add user at log in from getter
 // final user = AccountSignIn.getglobalAccountUsername;
 
@@ -71,7 +72,7 @@ class _WidgetSetupState extends State<WidgetSetup> {
 
   final _db = FirebaseFirestore.instance;
   //get MyAdventures list
-  Future<List<Adventure>> getMyAdventures(String user) async {
+  Future<List<Adventure>> getMyAdventures(String? user) async {
     final snapshot = await _db.collection("AdventureRatings")
         .doc(user).collection("MyAdventureRatings").get();
     final myAdventuresData = snapshot.docs.map((e)
