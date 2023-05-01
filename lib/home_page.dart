@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'main.dart';
 import 'match_page.dart';
 import 'profile_mgmt.dart';
-import 'msg_page.dart';
+import 'message_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
       style: optionStyle,
     ),
     const MyAdventureQuestRatings(),
-    const MsgPage(),
+    const MessagePage(),
     const ProfileMgmtPage(),
   ];
 
