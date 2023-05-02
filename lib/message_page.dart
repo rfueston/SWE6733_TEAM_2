@@ -20,12 +20,9 @@ class _MyMessagePageState extends State<MessagePage> {
 
   final user = FirebaseAuth.instance.currentUser;
 
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
-
-
   List<MessageItem> _message = [
     MessageItem(
-      text: "ho",
+      text: "Yo",
       date: DateTime.now().subtract(Duration(days: 1)),
       isSentByMe:  true,
     ),
@@ -62,6 +59,8 @@ class _MyMessagePageState extends State<MessagePage> {
       isSentByMe: true,
     );
 
+
+
     // msgController.dispose();
 
     setState(() => _message.add(message));
@@ -82,9 +81,9 @@ class _MyMessagePageState extends State<MessagePage> {
               child: GroupedListView<MessageItem, DateTime>(
                 elements: _message,
                 groupBy: (message) => DateTime(
-                  message.date.year,
                   message.date.month,
                   message.date.day,
+                  message.date.year,
                 ),
                 groupHeaderBuilder: (MessageItem message)  => SizedBox(
                   height: 40,
@@ -94,7 +93,7 @@ class _MyMessagePageState extends State<MessagePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(8),
                         child: Text(
-                            DateFormat("yyyy-MM-dd HH:mm:ss").format(message.date),
+                            DateFormat("MM-dd-yyyy").format(message.date),
                             style: const TextStyle(color: Colors.white)
                         ),
 
@@ -108,7 +107,7 @@ class _MyMessagePageState extends State<MessagePage> {
                     elevation: 10,
                     child: Padding(
                         padding: const EdgeInsets.all(8),
-                        child: Text(message.text + 'is this working????')
+                        child: Text(message.text)
                     ),
                   ),
                 ),

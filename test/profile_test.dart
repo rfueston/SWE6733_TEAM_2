@@ -44,8 +44,8 @@ void main() {
     await tester.pump();
 
     // Verify that text starts on home page
-    expect(find.byKey(Key('activityskiing')), findsOneWidget);
-    expect(find.byKey(Key('activityswimming')), findsOneWidget);
+    expect(find.byKey(Key('activitybiking')), findsOneWidget);
+    expect(find.byKey(Key('activityrunning')), findsOneWidget);
     expect(find.byKey(Key('activityhiking')), findsOneWidget);
   });
 
