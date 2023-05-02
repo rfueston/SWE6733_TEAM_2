@@ -67,8 +67,6 @@ class MyMatches extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Matches().findMatching();
-    Matches().getAdventureMatch();
     final ButtonStyle style = TextButton.styleFrom(
       foregroundColor: Theme.of(context).colorScheme.onPrimary,
     );
@@ -101,16 +99,12 @@ class MyMatches extends StatelessWidget {
             bottom: TabBar(
                     tabs: [
                       Tab(icon: Icon(Icons.hiking_outlined)),
-                      Tab(icon: Icon(Icons.directions_bike_outlined)),
-                      Tab(icon: Icon(Icons.directions_run_outlined)),
                     ],
                   ),
                 ),
                 body: TabBarView(
                   children: [
                     matchedHikingTab == false ? Icon(Icons.hiking_outlined, size: 350) : const MyMatchHiking(),
-                    matchedBikeTab == false ? Icon(Icons.directions_bike_outlined, size: 350) : const MyMatchBike(),
-                    matchedRunTab == false ? Icon(Icons.directions_run_outlined, size: 350) : const MyMatchRun(),
                   ],
                 ),
               ),
@@ -177,4 +171,3 @@ class MyMatchRun extends StatelessWidget {
     );
   }
 }
-

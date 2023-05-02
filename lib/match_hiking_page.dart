@@ -6,7 +6,7 @@ import 'main.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-// import 'liked_page.dart';
+import 'matches.dart';
 
 
 class MatchHikingPage extends StatefulWidget {
@@ -21,21 +21,26 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
     //logic to add matched user to friends list
   }
 
+  final matchingUsers = Matches().getMyAdventureMatch();
+
   int _currentIndex = 0;
   List<User> _matchingUsers = [
     User(
-      name: 'Talia',
+      name: 'testuser3@email.com',
       photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/0.jpg',
+      rating: '2',
       bio: 'I love hiking and exploring new places!',
     ),
     User(
-      name: 'Scott',
+      name: 'testuser4@email.com',
       photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/1.jpg',
+      rating: '-6',
       bio: 'I love hiking',
     ),
     User(
-      name: 'Abel',
+      name: 'testuser5@email.com',
       photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/5.jpg',
+      rating: '-2',
       bio: 'I love exploring new places!',
     ),
   ];
@@ -161,11 +166,13 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
 class User {
   final String name;
   final String photoUrl;
+  final String rating;
   final String bio;
 
   User({
     required this.name,
     required this.photoUrl,
+    required this.rating,
     required this.bio,
   });
 }
