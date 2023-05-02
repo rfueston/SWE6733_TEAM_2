@@ -6,13 +6,15 @@ import 'main.dart';
 import 'match_page.dart';
 import 'profile_mgmt.dart';
 import 'message_page.dart';
+import 'message_search_page.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage> createState() => HomePageState();
 }
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 15, fontWeight: FontWeight.normal);
@@ -23,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       style: optionStyle,
     ),
     const MyAdventureQuestRatings(),
-    const MessagePage(),
+    const MessageSearchPage(),
     const ProfileMgmtPage(),
   ];
 

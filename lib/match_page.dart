@@ -8,7 +8,6 @@ import 'package:provider/provider.dart';
 import 'match_hiking_page.dart';
 import 'match_bike_page.dart';
 import 'match_run_page.dart';
-import 'match_skiing_page.dart';
 import 'matches.dart';
 
 
@@ -65,10 +64,11 @@ class MyMatches extends StatelessWidget {
   final matchedHikingTab = true;
   final matchedBikeTab = false;
   final matchedRunTab = false;
-  final matchedSkiingTab = false;
 
   @override
   Widget build(BuildContext context) {
+    Matches().findMatching();
+    Matches().getAdventureMatch();
     final ButtonStyle style = TextButton.styleFrom(
       foregroundColor: Theme.of(context).colorScheme.onPrimary,
     );
@@ -103,7 +103,6 @@ class MyMatches extends StatelessWidget {
                       Tab(icon: Icon(Icons.hiking_outlined)),
                       Tab(icon: Icon(Icons.directions_bike_outlined)),
                       Tab(icon: Icon(Icons.directions_run_outlined)),
-                      Tab(icon: Icon(Icons.downhill_skiing_outlined)),
                     ],
                   ),
                 ),
@@ -112,7 +111,6 @@ class MyMatches extends StatelessWidget {
                     matchedHikingTab == false ? Icon(Icons.hiking_outlined, size: 350) : const MyMatchHiking(),
                     matchedBikeTab == false ? Icon(Icons.directions_bike_outlined, size: 350) : const MyMatchBike(),
                     matchedRunTab == false ? Icon(Icons.directions_run_outlined, size: 350) : const MyMatchRun(),
-                    matchedSkiingTab == false ? Icon(Icons.downhill_skiing_outlined, size: 350) : const MyMatchSkiing(),
                   ],
                 ),
               ),
@@ -180,21 +178,3 @@ class MyMatchRun extends StatelessWidget {
   }
 }
 
-class MyMatchSkiing extends StatelessWidget {
-  const MyMatchSkiing({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'AdventureQuest',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
-        ),
-        home: MatchSkiingPage(),
-      ),
-    );
-  }
-}

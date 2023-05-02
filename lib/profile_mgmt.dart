@@ -20,9 +20,9 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
   // Location settings
   final myControllerState = TextEditingController();
   //Activities settings
-  final myControllerSkiing = TextEditingController();
+  final myControllerBiking = TextEditingController();
   final myControllerHiking = TextEditingController();
-  final myControllerSwimming = TextEditingController();
+  final myControllerRunning = TextEditingController();
 
   @override
   void initState() {
@@ -41,9 +41,9 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
     // Location settings
     myControllerState.dispose();
     //Activities settings
-    myControllerSkiing.dispose();
+    myControllerBiking.dispose();
     myControllerHiking.dispose();
-    myControllerSwimming.dispose();
+    myControllerRunning.dispose();
     super.dispose();
   }
 
@@ -167,9 +167,9 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
         });
       });
 //
-  bool valueSkiing = false;
+  bool valueBiking = false;
   bool valueHiking = false;
-  bool valueSwimming = false;
+  bool valueRunning = false;
 
   late final activitySettingsWidget =
       StatefulBuilder(builder: (BuildContext context, StateSetter setState) {
@@ -182,15 +182,15 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
             textAlign: TextAlign.center,
           ),
           CheckboxListTile(
-            key: Key('activityskiing'),
+            key: Key('activitybiking'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
-            title: const Text('Skiing'),
-            selected: valueSkiing,
-            value: valueSkiing,
+            title: const Text('Biking'),
+            selected: valueBiking,
+            value: valueBiking,
             onChanged: (value) {
               setState(() {
-                valueSkiing = value!;
+                valueBiking = value!;
               });
             },
           ),
@@ -210,15 +210,15 @@ class _MyProfileMgmtPage extends State<ProfileMgmtPage> {
           ),
           CheckboxListTile(
             //controlAffinity: ListTileControlAffinity.trailing,
-            key: Key('activityswimming'),
+            key: Key('activityrunning'),
             contentPadding: EdgeInsets.only(left: 150, right: 150),
             secondary: const Icon(Icons.sports),
-            title: const Text('Swimming'),
-            selected: valueSwimming,
-            value: valueSwimming,
+            title: const Text('Running'),
+            selected: valueRunning,
+            value: valueRunning,
             onChanged: (value) {
               setState(() {
-                valueSwimming = value!;
+                valueRunning = value!;
               });
             },
           ),
