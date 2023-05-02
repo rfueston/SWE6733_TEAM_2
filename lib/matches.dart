@@ -8,247 +8,180 @@ import 'main.dart';
 final user = FirebaseAuth.instance.currentUser?.email;
 
 class Matches {
-  List<AdventureMatch> _match = [
-    AdventureMatch(
-      id: 'biking',
-      preference: 2,
-      skill: 2,
-    ),
-    AdventureMatch(
-      id: 'hiking',
-      preference: 2,
-      skill: 2,
-    ),
-    AdventureMatch(
-      id: 'running',
-      preference: 2,
-      skill: 2,
-    ),
-  ].reversed.toList();
-
-  List<Iterable<AdventureMatch>> myExistingAdv = List.empty();
 
   final _db = FirebaseFirestore.instance;
 
   //get match list
-  // Future<List<AdventureMatch>>
-  Future<void> getMyAdventureMatch() async {
-
+  Future<Map> getMyAdventureMatch() async {
     String? _userMatches;
     String? _sizeMatches;
-     int? _test1 = 0;
-     int? _test2 = 0;
-
-
-    final documentSnapshot = await _db.collection("AdventureRatings").doc("testuser3@email.com").get();
-    final data = documentSnapshot.data();
-
-    final bike = data?['biking'];
-
-
-    print("RGF??????????????");
-    print(bike.toString());
-    print("RGF??????????????");
-    print(bike.toString());
-    print("RGF??????????????");
+    int? bikingSkill = 0;
+    int? bikingPreference = 0;
+    int? hikingSkill = 0;
+    int? hikingPreference = 0;
+    int? runningSkill = 0;
+    int? runningPreference = 0;
+    int? yourBikingSkill = 0;
+    int? yourBikingPreference = 0;
+    int? yourHikingSkill = 0;
+    int? yourHikingPreference = 0;
+    int? yourRunningSkill = 0;
+    int? yourRunningPreference = 0;
+    var userMatchedFinalRating = {};
 
     await _db.collection("AdventureRatings").get().then(
       (querySnapshot) async {
         for (var docSnapshot in querySnapshot.docs) {
-
           var matchesAmount = querySnapshot.size;
           var matches = docSnapshot.id;
 
           _sizeMatches = matchesAmount.toString();
           _userMatches = matches.toString();
+          int userMatchRating = 0;
 
-           await _db.collection("AdventureRatings").doc("testuser3@email.com").collection("MyAdventureRatings").doc("biking").get().then(
-                (querySnapshot2) {
-                    var _test3 = querySnapshot2.data()?['skill'];
-                    var _test4 = querySnapshot2.data()?['preference'];
-
-                    _test1 = _test4;
-                    _test2 = _test4;
+          await _db
+              .collection("AdventureRatings")
+              .doc(user)
+              .collection("MyAdventureRatings")
+              .doc("biking")
+              .get()
+              .then(
+            (querySnapshot2) {
+              yourBikingSkill = querySnapshot2.data()?['skill'];
+              yourBikingPreference = querySnapshot2.data()?['preference'];
             },
             onError: (e) => print("Error completing: $e"),
           );
 
-
-          await _db.collection("AdventureRatings").doc(matches).collection("MyAdventureRatings").doc("hiking").get().then(
-                (querySnapshot3) {
-              print("hiking skill: ${querySnapshot3.data()?['skill']}");
-              print("hiking preference: ${querySnapshot3.data()?['preference']}");
+          await _db
+              .collection("AdventureRatings")
+              .doc(matches)
+              .collection("MyAdventureRatings")
+              .doc("biking")
+              .get()
+              .then(
+            (querySnapshot2) {
+              bikingSkill = querySnapshot2.data()?['skill'];
+              bikingPreference = querySnapshot2.data()?['preference'];
             },
             onError: (e) => print("Error completing: $e"),
           );
 
-          await _db.collection("AdventureRatings").doc(matches).collection("MyAdventureRatings").doc("running").get().then(
-                (querySnapshot4) {
-              print("running skill: ${querySnapshot4.data()?['preference']}");
-              print("running preference: ${querySnapshot4.data()?['skill']}");
+          userMatchRating = matchRating(bikingPreference, bikingSkill,
+              yourBikingPreference, yourBikingSkill);
+
+          await _db
+              .collection("AdventureRatings")
+              .doc(user)
+              .collection("MyAdventureRatings")
+              .doc("hiking")
+              .get()
+              .then(
+            (querySnapshot3) {
+              yourHikingSkill = querySnapshot3.data()?['skill'];
+              yourHikingPreference = querySnapshot3.data()?['preference'];
             },
             onError: (e) => print("Error completing: $e"),
           );
+
+          await _db
+              .collection("AdventureRatings")
+              .doc(matches)
+              .collection("MyAdventureRatings")
+              .doc("hiking")
+              .get()
+              .then(
+            (querySnapshot3) {
+              hikingSkill = querySnapshot3.data()?['skill'];
+              hikingPreference = querySnapshot3.data()?['preference'];
+            },
+            onError: (e) => print("Error completing: $e"),
+          );
+
+          userMatchRating = userMatchRating +
+              matchRating(hikingPreference, hikingSkill, yourHikingPreference,
+                  yourHikingSkill);
+
+          await _db
+              .collection("AdventureRatings")
+              .doc(user)
+              .collection("MyAdventureRatings")
+              .doc("running")
+              .get()
+              .then(
+            (querySnapshot4) {
+              yourRunningSkill = querySnapshot4.data()?['skill'];
+              yourRunningPreference = querySnapshot4.data()?['preference'];
+            },
+            onError: (e) => print("Error completing: $e"),
+          );
+
+          await _db
+              .collection("AdventureRatings")
+              .doc(matches)
+              .collection("MyAdventureRatings")
+              .doc("running")
+              .get()
+              .then(
+            (querySnapshot4) {
+              runningSkill = querySnapshot4.data()?['skill'];
+              runningPreference = querySnapshot4.data()?['preference'];
+            },
+            onError: (e) => print("Error completing: $e"),
+          );
+
+          userMatchRating = userMatchRating +
+              matchRating(runningPreference, runningSkill,
+                  yourRunningPreference, yourRunningSkill);
+
+          userMatchedFinalRating['${_userMatches}'] = '${userMatchRating}';
         }
       },
       onError: (e) => print("Error completing: $e"),
     );
 
-    print("RGF??????????????");
-    print(_test2.toString());
-    print("RGF??????????????");
-    print(_test1.toString());
-    print("RGF??????????????");
+    List matchedList = [];
 
+    userMatchedFinalRating.entries.forEach((e) => matchedList.add(matchedUser(e.key, e.value)));
 
-    // for (int i = 0; i < 5; i++) {
-    //   print('GeeksForGeeks');
-    // }
+    var mappedMatch = Map.fromIterable(matchedList, key: (e) => e.name, value: (e) => e.rating);
 
-    // final myAdventuresData = "true";
+    print(mappedMatch);
 
-    // print(myAdventuresData);
-    //
-    // print(myAdventuresData);
-    //
-    //
-    //
-    // return myAdventuresData;
+    return mappedMatch;
   }
 
-  getAdventureMatch() async {
-    return getMyAdventureMatch();
-  }
-
-  int hikingRating() {
-    //is your preference larger than the other person?
-    //is your preference smaller than the other person?
-    //is your preference the same
-    //is your skill larger than the other person?
-    //is your skill smaller than the other person?
-    //is your skill the same
-
-    var preference = 0;
-    var skill = 0;
-    var yourPreference = 0;
-    var yourSkill = 0;
+  int matchRating(preference, skill, yourPreference, yourSkill) {
+    var matchPreference = preference;
+    var matchSkill = skill;
+    var yourMatchPreference = yourPreference;
+    var yourMatchSkill = yourSkill;
     var matchCount = 0;
 
-    if (preference == yourPreference) {
+    if (matchPreference == yourMatchPreference) {
       matchCount++;
     } else {
       matchCount--;
     }
 
-    if (skill == yourSkill) {
+    if (matchSkill == yourMatchSkill) {
       matchCount++;
     } else {
       matchCount--;
     }
 
     return matchCount;
-  }
-
-  int bikingRating() {
-    var preference = 0;
-    var skill = 0;
-    var yourPreference = 0;
-    var yourSkill = 0;
-    var matchCount = 0;
-
-    if (preference == yourPreference) {
-      matchCount++;
-    } else {
-      matchCount--;
-    }
-
-    if (skill == yourSkill) {
-      matchCount++;
-    } else {
-      matchCount--;
-    }
-
-    return matchCount;
-  }
-
-  int runningRating() {
-    var preference = 0;
-    var skill = 0;
-    var yourPreference = 0;
-    var yourSkill = 0;
-    var matchCount = 0;
-
-    if (preference == yourPreference) {
-      matchCount++;
-    } else {
-      matchCount--;
-    }
-
-    if (skill == yourSkill) {
-      matchCount++;
-    } else {
-      matchCount--;
-    }
-
-    return matchCount;
-  }
-
-  Future<int> findMatching() async {
-    var rating = 0;
-
-    // if (_match.AdventureMatch.id == 'biking') {
-    //   rating = rating + hikingRating() as int;
-    // }
-    //
-    // if (_match.AdventureMatch.id == 'hiking') {
-    //   //this is for hiking
-    //   rating = rating + hikingRating() as int;
-    // }
-    //
-    // if (_match.AdventureMatch.id == 'running') {
-    //   rating = rating + hikingRating() as int;
-    // }
-
-    var totalMatchRating = rating;
-
-    return totalMatchRating;
-  }
-
-  void findOrderMatch() {
-
-//create loop to store list of each user in
-// order if match rating is above 0 and then
-// list each user as a match
-    findMatching();
-
-
-
-
   }
 }
 
-class AdventureMatch {
-  final String? id;
-  final int? preference;
-  final int? skill;
+class matchedUser {
+  String name;
+  String rating;
 
-  const AdventureMatch({
-    this.id,
-    this.preference,
-    this.skill,
-  });
+  matchedUser(this.name, this.rating);
 
-  toJson() {
-    return {"preference": preference, "skill": skill};
-  }
-
-  factory AdventureMatch.fromSnapshot(
-      DocumentSnapshot<Map<String, dynamic>> document) {
-    final data = document.data()!;
-    return AdventureMatch(
-      id: document.id,
-      preference: data["preference"],
-      skill: data["skill"],
-    );
-  }
+  // @override
+  // String toString() {
+  //   return '{ ${this.name}, ${this.rating} }';
+  // }
 }
