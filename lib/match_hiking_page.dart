@@ -85,6 +85,7 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
                       Image.asset(user.photoUrl),
                       // Image.network(user.photoUrl),
                       Text(user.bio),
+                      Text(user.rating),
                     ],
                   ),
                 );
