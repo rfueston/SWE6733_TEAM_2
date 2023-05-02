@@ -32,7 +32,7 @@ class Matches {
 
   //get match list
   // Future<List<AdventureMatch>>
-  Future<void> getMyAdventureMatch() async {
+  Future getMyAdventureMatch() async {
 
     String? _userMatches;
     String? _sizeMatches;
@@ -53,7 +53,7 @@ class Matches {
     print("RGF??????????????");
 
     await _db.collection("AdventureRatings").get().then(
-      (querySnapshot) async {
+      (querySnapshot) {
         for (var docSnapshot in querySnapshot.docs) {
 
           var matchesAmount = querySnapshot.size;
@@ -62,7 +62,7 @@ class Matches {
           _sizeMatches = matchesAmount.toString();
           _userMatches = matches.toString();
 
-           await _db.collection("AdventureRatings").doc("testuser3@email.com").collection("MyAdventureRatings").doc("biking").get().then(
+           _db.collection("AdventureRatings").doc("testuser3@email.com").collection("MyAdventureRatings").doc("biking").get().then(
                 (querySnapshot2) {
                     var _test3 = querySnapshot2.data()?['skill'];
                     var _test4 = querySnapshot2.data()?['preference'];
@@ -74,7 +74,7 @@ class Matches {
           );
 
 
-          await _db.collection("AdventureRatings").doc(matches).collection("MyAdventureRatings").doc("hiking").get().then(
+          _db.collection("AdventureRatings").doc(matches).collection("MyAdventureRatings").doc("hiking").get().then(
                 (querySnapshot3) {
               print("hiking skill: ${querySnapshot3.data()?['skill']}");
               print("hiking preference: ${querySnapshot3.data()?['preference']}");
@@ -82,7 +82,7 @@ class Matches {
             onError: (e) => print("Error completing: $e"),
           );
 
-          await _db.collection("AdventureRatings").doc(matches).collection("MyAdventureRatings").doc("running").get().then(
+          _db.collection("AdventureRatings").doc(matches).collection("MyAdventureRatings").doc("running").get().then(
                 (querySnapshot4) {
               print("running skill: ${querySnapshot4.data()?['preference']}");
               print("running preference: ${querySnapshot4.data()?['skill']}");

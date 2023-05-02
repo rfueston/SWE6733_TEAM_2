@@ -45,6 +45,7 @@ class _MyMessagePageState extends State<MessagePage> {
   ].reversed.toList();
 
   final msgController = TextEditingController();
+  // late String? msgUser = '';
 
   @override
   void dispose() {
@@ -59,8 +60,6 @@ class _MyMessagePageState extends State<MessagePage> {
       isSentByMe: true,
     );
 
-
-
     // msgController.dispose();
 
     setState(() => _message.add(message));
@@ -71,7 +70,7 @@ class _MyMessagePageState extends State<MessagePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Testuser 2"),
+        title: Text("USER"),
       ),
       body: Center(
         child: Column(
