@@ -27,19 +27,19 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
   List<User> _matchingUsers = [
     User(
       name: 'testuser3@email.com',
-      photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/0.jpg',
+      photoUrl: 'https://i.kym-cdn.com/photos/images/original/001/701/671/08c.jpg',
       rating: '2',
       bio: 'I love hiking and exploring new places!',
     ),
     User(
       name: 'testuser4@email.com',
-      photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/1.jpg',
+      photoUrl: 'https://i.kym-cdn.com/photos/images/original/001/700/562/659.jpg',
       rating: '-6',
       bio: 'I love hiking',
     ),
     User(
       name: 'testuser5@email.com',
-      photoUrl: '/Users/rfueston/IdeaProjects/SWE6733_TEAM_2_AdventureQuest/Assests/5.jpg',
+      photoUrl: 'https://i.kym-cdn.com/photos/images/original/001/700/567/eae.jpg',
       rating: '-2',
       bio: 'I love exploring new places!',
     ),
