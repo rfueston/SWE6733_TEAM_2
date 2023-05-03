@@ -55,7 +55,6 @@ class CreateAccount {
         "lastname": lastname,
         "username": username,
         "email": email,
-        "gdpr": false
       };
       accountCollection.doc(username).set(data);
       return 'true';
