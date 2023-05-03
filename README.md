@@ -263,6 +263,10 @@ Web link: https://swe6733-adventure-quest.web.app
 
 Mobile App Download Link: https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/tree/main/project_app_builds
 
+LOGIN TEST USER:
+USERNAME: testuser@email.com
+PASSWORD: Password
+
 Resouces:
 
 "Copyright 2020 The Chromium Authors" for mock.dart file
