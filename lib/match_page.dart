@@ -82,7 +82,7 @@ class MyMatches extends StatelessWidget {
     //   print(allData);
     // }
     return DefaultTabController(
-    length: 4,
+    length: 1,
     child: Scaffold(
         appBar: AppBar(
           title: const Text('Matches'),
@@ -129,44 +129,6 @@ class MyMatchHiking extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         ),
         home: MatchHikingPage(),
-      ),
-    );
-  }
-}
-
-class MyMatchBike extends StatelessWidget {
-  const MyMatchBike({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'AdventureQuest',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
-        ),
-        home: MatchBikePage(),
-      ),
-    );
-  }
-}
-
-class MyMatchRun extends StatelessWidget {
-  const MyMatchRun({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'AdventureQuest',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
-        ),
-        home: MatchRunPage(),
       ),
     );
   }

@@ -35,21 +35,37 @@ void main() async{
 
   });
 
-  // TODO: Implement mock firebase (mockito)
-  // testWidgets('Login Smoke Test: testSignInWithAccountNeg', (WidgetTester tester) async {
-  //   // Build our app and trigger a frame.
-  //   await tester.pumpWidget(const MyAdventureQuestSignIn());
-  //
-  //   // Verify that text starts on sign in page
-  //   expect(find.text('Welcome To AdventureQuest'), findsOneWidget);
-  //
-  //   // enter text
-  //   await tester.enterText(find.byKey(Key('siginusername')), 'rfueston');
-  //   await tester.pump();
-  //   await tester.enterText(find.byKey(Key('siginpassword')), 'test11');
-  //   await tester.pump();
-  //
-  //   await tester.tap(find.byKey(Key('siginbutton')));
-  //   await tester.pump();
-  // });
+  testWidgets(
+      'Sign In Smoke Test: testSignInWithToManyCharactersName', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyAdventureQuestSignIn());
+
+    // enter text
+    await tester.enterText(find.byKey(Key('signinusername')), 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz');
+    await tester.pump();
+
+    expect(find.text('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'), findsNothing);
+    expect(find.text('abcdefghijklmnopqrstuvwxyzabcdefghijklmn'), findsOneWidget);
+  });
+
+  testWidgets(
+      'Sign In Smoke Test: testSignInWithToManyCharactersPass', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyAdventureQuestSignIn());
+
+    // enter text
+    await tester.enterText(find.byKey(Key('signinpassword')), 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz');
+    await tester.pump();
+
+    expect(find.text('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'), findsNothing);
+    expect(find.text('abcdefghijklmnopqrstuvwxyzabcdefghijklmn'), findsOneWidget);
+  });
+
+
+  testWidgets('sign in Smoke Test: testSignInNotObscured', (WidgetTester tester) async {
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const MyAdventureQuestSignIn());
+
+    expect((tester.firstWidget(find.byType(TextField)) as TextField).obscureText, false);
+  });
 }
