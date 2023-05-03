@@ -63,7 +63,7 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
         CarouselSlider(
           key: UniqueKey(),
           options: CarouselOptions(
-            height: 400,
+            height: 450,
             viewportFraction: 0.8,
             initialPage: _currentIndex,
             enableInfiniteScroll: false,
