@@ -267,7 +267,7 @@ Mobile App Download Link: https://github.com/rfueston/SWE6733_TEAM_2_AdventureQu
 USERNAME: testuser@email.com
 PASSWORD: Password
 
-Resouces:
+<h2>Resouces:</h2>
 
 "Copyright 2020 The Chromium Authors" for mock.dart file
 
