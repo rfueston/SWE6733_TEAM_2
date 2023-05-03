@@ -263,7 +263,7 @@ Web link: https://swe6733-adventure-quest.web.app
 
 Mobile App Download Link: https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/tree/main/project_app_builds
 
-LOGIN TEST USER:
+<h3>LOGIN TEST USER:</h3>
 USERNAME: testuser@email.com
 PASSWORD: Password
 
