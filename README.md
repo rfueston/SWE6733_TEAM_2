@@ -198,3 +198,75 @@ Sprint Retro:
 <h2>Prototype Link</h2>
 
 Web link: https://swe6733-adventure-quest.web.app
+
+<h1>SPRINT 3</h1>
+
+<h2>Sprint 3 Forecast and Rationale</h2>
+
+We were forecasting 29 points for this sprint. This sprint ended up being a lot harder than expected and I do not think we did the best job sizing our stories considering how much time we had to spend on some of them to get them to work. Luckily we mobbed a lot and kept eachother up to date on what we were finished with. Since this was our last sprint we tried to take up as many taks as we could and I think that was a mistake. we should have stuck to 20ish points like we had in the past. realitiscly to consider this project DOD we would need one more sprint. However our app is in a working prototype state and we are able to show off the completed stories. 
+
+Sprint 3 Backlog: 
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/backlog_sprint_3.png)
+
+<h2>Sprint Board</h2>
+
+https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/sprint3_done.png)
+
+
+<h2>Sprint 3 Burndown Chart</h2>
+
+https://sweksu.atlassian.net/jira/software/projects/SWE6733/boards/2/reports/burndown
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/burndown_chart_sprint_3.png)
+
+<h2>Sprint Daily Scrum Standup Meeeting</h2>
+
+https://youtu.be/Rh0lVnvyefQ
+
+<h2>Paired and Mobbed Programming</h2>
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/mobbing_sprint_3.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/Sprint_3_mobbing.png)
+
+<h2>A-TDD Results</h2>
+
+30 tests total
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/sprint3_TDD_create_account.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/sprint_3_tdd_home.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/sprint_3_TDD_login_page.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/sprint3_tdd_profile.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/sprint_3_chat_tdd.png)
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/Sprint3_TDD_matches_Page.png)
+
+<h2>CICD</h2>  
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/CICD_s3_1.png)
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/CICD_s3_2.png)
+
+<h2>Sprint Review and Sprint Retrospective</h2>
+
+Sprint Review:
+
+Link: https://youtu.be/o8tbCO5-KyQ
+
+Sprint Retro:
+
+![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/SPRINT_3_RETRO.png)
+
+<h2>Prototype Link</h2>
+
+Web link: https://swe6733-adventure-quest.web.app
+
+Mobile App Download Link: https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/tree/main/project_app_builds
+
+Resouces:
+
+"Copyright 2020 The Chromium Authors" for mock.dart file
+
+https://stackoverflow.com/questions/63662031/how-to-mock-the-firebaseapp-in-flutter
+
+https://firebase.flutter.dev/docs/testing/testing/#testing-a-firestore-app
