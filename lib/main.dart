@@ -13,6 +13,7 @@ import 'profile_mgmt.dart';
 import 'match_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'adventure_rating_page.dart';
+import 'friends_list_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -120,6 +121,25 @@ class MyAdventureQuestRatings extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         ),
         home: AdventureRatingPage(),
+      ),
+    );
+  }
+}
+
+class MyAdventureQuestFriends extends StatelessWidget {
+  const MyAdventureQuestFriends({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => MyAppState(),
+      child: MaterialApp(
+        title: 'AdventureQuest',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        ),
+        home: FriendsListPage(),
       ),
     );
   }
@@ -260,6 +280,7 @@ class MyApp extends StatelessWidget {
 
 class MyAppState extends ChangeNotifier {
   //TODO:implement
+  var friends = {'testuser4@email.com', 'testuser3@email.com'};
 }
 
 class NavigationBar extends StatefulWidget {

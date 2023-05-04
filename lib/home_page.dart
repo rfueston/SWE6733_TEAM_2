@@ -20,10 +20,7 @@ class HomePageState extends State<HomePage> {
   TextStyle(fontSize: 15, fontWeight: FontWeight.normal);
   static const List<Widget> _widgetOptions = <Widget>[
     const MyMatches(),
-    Text(
-      'Liked profiles will be displayed here',
-      style: optionStyle,
-    ),
+    const MyAdventureQuestFriends(),
     const MyAdventureQuestRatings(),
     const MessageSearchPage(),
     const ProfileMgmtPage(),
