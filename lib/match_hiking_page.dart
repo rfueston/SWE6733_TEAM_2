@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'matches.dart';
-
+import 'like_page.dart';
+import 'dart:io';
 
 class MatchHikingPage extends StatefulWidget {
   const MatchHikingPage({super.key});
@@ -27,19 +28,19 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
   List<User> _matchingUsers = [
     User(
       name: 'testuser3@email.com',
-      photoUrl: 'https://i.kym-cdn.com/photos/images/original/001/701/671/08c.jpg',
+      photoUrl: 'Assests/image1.jpg',
       rating: '2',
       bio: 'I love hiking and exploring new places!',
     ),
     User(
       name: 'testuser4@email.com',
-      photoUrl: 'https://i.kym-cdn.com/photos/images/original/001/700/562/659.jpg',
+      photoUrl: 'Assests/image2.jpg',
       rating: '-6',
       bio: 'I love hiking',
     ),
     User(
       name: 'testuser5@email.com',
-      photoUrl: 'https://i.kym-cdn.com/photos/images/original/001/700/567/eae.jpg',
+      photoUrl: 'Assests/image3.jpg',
       rating: '-2',
       bio: 'I love exploring new places!',
     ),
@@ -58,61 +59,68 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
   Widget _buildCarouselSlider() {
     return SingleChildScrollView(
       child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CarouselSlider(
-          key: UniqueKey(),
-          options: CarouselOptions(
-            height: 450,
-            viewportFraction: 0.8,
-            initialPage: _currentIndex,
-            enableInfiniteScroll: false,
-            reverse: false,
-            onPageChanged: (index, reason) {
-              setState(() {
-                _currentIndex = index;
-              });
-            },
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CarouselSlider(
+            key: UniqueKey(),
+            options: CarouselOptions(
+              height: 450,
+              viewportFraction: 0.8,
+              initialPage: _currentIndex,
+              enableInfiniteScroll: false,
+              reverse: false,
+              onPageChanged: (index, reason) {
+                setState(() {
+                  _currentIndex = index;
+                });
+              },
+            ),
+            items: _matchingUsers.map((user) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Card(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(user.name),
+                        //Image(image: AssetImage('Assests/image1.jpg')),
+                        Image.asset(user.photoUrl),
+                        // Image.network(user.photoUrl),
+                        Text(user.bio),
+                        Text(user.rating),
+                      ],
+                    ),
+                  );
+                },
+              );
+            }).toList(),
           ),
-          items: _matchingUsers.map((user) {
-            return Builder(
-              builder: (BuildContext context) {
-                return Card(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(user.name),
-                      Image.asset(user.photoUrl),
-                      // Image.network(user.photoUrl),
-                      Text(user.bio),
-                      Text(user.rating),
-                    ],
-                  ),
-                );
-              },
-            );
-          }).toList(),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                _swipeLeft();
-              },
-              child: Text('Nope'),
-            ),
-            SizedBox(width: 16),
-            ElevatedButton(
-              onPressed: () {
-                _swipeRight();
-              },
-              child: Text('Like'),
-            ),
-          ],
-        ),
-      ],
-    ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  _swipeLeft();
+                },
+                child: Text('Nope'),
+              ),
+              SizedBox(width: 16),
+              ElevatedButton(
+                // onPressed: () {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(builder: (context) => HomePage()),
+                //   );
+                // },
+                onPressed: () {
+                  _swipeRight();
+                },
+                child: Text('Like'),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -138,23 +146,32 @@ class _MyMatchHikingPage extends State<MatchHikingPage> {
   //   });
   // }
 
+  // void _swipeRight() {
+  //   // setState(() {
+  //   //   if (_currentIndex < _matchingUsers.length - 1) {
+  //   //     _currentIndex++;
+  //   //   } else {
+  //   //     // If we're at the last user, loop around to the first user
+  //   //     _currentIndex = 0;
+  //   //   }
+  //   // });
+  //   //
+  //   // // Navigate to the ProfilePage with the selected user
+  //   // Navigator.push(
+  //   //   context,
+  //   //   MaterialPageRoute(
+  //   //       builder: (context) => LikedPage(user:
+  //   //       _matchingUsers[_currentIndex])),
+  //   // );
+  // }
+
   void _swipeRight() {
-    // setState(() {
-    //   if (_currentIndex < _matchingUsers.length - 1) {
-    //     _currentIndex++;
-    //   } else {
-    //     // If we're at the last user, loop around to the first user
-    //     _currentIndex = 0;
-    //   }
-    // });
-    //
-    // // Navigate to the ProfilePage with the selected user
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //       builder: (context) => LikedPage(user:
-    //       _matchingUsers[_currentIndex])),
-    // );
+    User selectedUser = _matchingUsers[_currentIndex];
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => UserDetailsPage(user: selectedUser)),
+    );
   }
 
   Widget _buildLoadingIndicator() {
