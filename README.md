@@ -203,7 +203,7 @@ Web link: https://swe6733-adventure-quest.web.app
 
 <h2>Sprint 3 Forecast and Rationale</h2>
 
-We were forecasting 29 points for this sprint. This sprint ended up being a lot harder than expected and I do not think we did the best job sizing our stories considering how much time we had to spend on some of them to get them to work. Luckily we mobbed a lot and kept eachother up to date on what we were finished with. Since this was our last sprint we tried to take up as many taks as we could and I think that was a mistake. we should have stuck to 20ish points like we had in the past. realitiscly to consider this project DOD we would need one more sprint. However our app is in a working prototype state and we are able to show off the completed stories. 
+We were forecasting 29 points for this sprint. This sprint ended up being a lot harder than expected and I do not think we did the best job sizing our stories considering how much time we had to spend on some of them to get them to work. Luckily, we mobbed a lot and kept each other up to date on what we were finished with. Since this was our last sprint, we tried to take up as many tasks as we could, and I think that was a mistake. we should have stuck to 20ish points like we had in the past. realistically to consider this project DOD we would need one more sprint. However, our app is in a working prototype state, and we are able to show off the completed stories.
 
 Sprint 3 Backlog: 
 ![Screenshot](https://github.com/rfueston/SWE6733_TEAM_2_AdventureQuest/blob/main/Sprint_3/backlog_sprint_3.png)
